@@ -40,7 +40,6 @@ class _ModeSelectionScreenState extends State<ModeSelectionScreen> {
     return Scaffold(
       backgroundColor: AppColors.background,
       
-      
       bottomNavigationBar: const SafeArea(
         child: Padding(
           padding: EdgeInsets.only(bottom: 10),
@@ -72,7 +71,6 @@ class _ModeSelectionScreenState extends State<ModeSelectionScreen> {
             )
         ],
       ),
-      
       body: ListView(
         padding: const EdgeInsets.all(20),
         children: [
@@ -176,14 +174,14 @@ class _ModeSelectionScreenState extends State<ModeSelectionScreen> {
     );
   }
 
-  
 
   void _timeFlow(BuildContext c, SettingsProvider s) {
     _showDialog(
       c, 
       s.getText('select_duration'), 
       [30, 60, 120, 180], 
-      (val) => _difficultyFlow(c, s, GameMode.timeAttack, d: val)
+      (val) => _difficultyFlow(c, s, GameMode.timeAttack, d: val),
+      limit: 300
     );
   }
 
@@ -192,7 +190,8 @@ class _ModeSelectionScreenState extends State<ModeSelectionScreen> {
       c, 
       s.getText('select_count'), 
       [25, 50, 75, 100], 
-      (val) => _difficultyFlow(c, s, GameMode.wordCount, n: val)
+      (val) => _difficultyFlow(c, s, GameMode.wordCount, n: val),
+      limit: 300 
     );
   }
 
@@ -264,7 +263,7 @@ class _ModeSelectionScreenState extends State<ModeSelectionScreen> {
     Navigator.push(c, MaterialPageRoute(builder: (_) => const GameScreen()));
   }
 
-  void _showDialog(BuildContext ctx, String t, List<int> v, Function(int) sel) {
+  void _showDialog(BuildContext ctx, String t, List<int> v, Function(int) sel, {int limit = 300}) {
     final ctrl = TextEditingController();
     final s = ctx.read<SettingsProvider>();
     
@@ -294,7 +293,11 @@ class _ModeSelectionScreenState extends State<ModeSelectionScreen> {
                     title: Text(s.getText('enter_value')),
                     content: TextField(
                       controller: ctrl,
-                      keyboardType: TextInputType.number
+                      keyboardType: TextInputType.number,
+                      decoration: const InputDecoration(
+                        hintText: "Max: 300", 
+                        border: OutlineInputBorder()
+                      ),
                     ),
                     actions: [
                       TextButton(
@@ -303,10 +306,25 @@ class _ModeSelectionScreenState extends State<ModeSelectionScreen> {
                       ),
                       ElevatedButton(
                         onPressed: () {
-                          int? i = int.tryParse(ctrl.text);
-                          if(i != null && i > 0) {
-                            Navigator.pop(dx);
-                            sel(i);
+                          int? val = int.tryParse(ctrl.text);
+                          
+                          
+                          if(val != null && val > 0) {
+                            if (val > limit) {
+                              
+                              ScaffoldMessenger.of(ctx).showSnackBar(
+                                SnackBar(
+                                  content: Text(s.getText('max_input_error')), 
+                                  backgroundColor: AppColors.wrongRed,
+                                  duration: const Duration(seconds: 2),
+                                )
+                              );
+                            } else {
+                              
+                              Navigator.pop(dx);
+                              Navigator.pop(d); 
+                              sel(val);
+                            }
                           }
                         },
                         child: Text(s.getText('ok'))
@@ -317,7 +335,7 @@ class _ModeSelectionScreenState extends State<ModeSelectionScreen> {
               }
             )
           ]
-        )
+        ),
       )
     );
   }

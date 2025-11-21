@@ -1,0 +1,31 @@
+{
+  "font_name": null,
+  "font_path": "assets/fonts/monogram-extended.ttf",
+  "title_font_size": 60,
+  "regular_font_size": 28,
+  "button_font_size": 36,
+  "small_font_size": 20,
+  "default_volume": 0.5,
+  "colors": {
+    "white": [255, 255, 255],
+    "black": [0, 0, 0],
+    "background": [245, 245, 245],
+    "primary_purple": [102, 51, 153],
+    "primary_hover": [128, 0, 128],
+    "secondary_teal": [0, 128, 128],
+    "correct_green": [60, 179, 113],
+    "wrong_red": [220, 20, 60],
+    "disabled": [128, 128, 128],
+    "overlay": [0, 0, 0, 200],
+    "slider_bg": [200, 200, 200],
+    "slider_fill": [102, 51, 153]
+  },
+  "assets": {
+    "sound_correct": "assets/sounds/correct.wav",
+    "sound_wrong": "assets/sounds/wrong.wav",
+    "sound_click": "assets/sounds/click.mp3",
+    "icon_unmute": "assets/icons/unmute.png",
+    "icon_mute": "assets/icons/mute.png",
+    "icon_home": "assets/icons/home.png"
+  }
+}

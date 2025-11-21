@@ -1,0 +1,63 @@
+# --- FLUTTER / DART CORE ---
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+/build/
+
+# --- ANDROID ---
+/android/.gradle/
+/android/local.properties
+
+/android/app/build/
+/android/app/debug/
+/android/app/profile/
+/android/app/release/
+/android/captures/
+/android/gradlew
+/android/gradlew.bat
+
+# --- GÜVENLİK ---
+# Uygulamayı imzalarken kullanacağın şifrelerin olduğu dosya
+/android/key.properties
+# Uygulama imzalama anahtarları 
+*.jks
+*.keystore
+*.pem
+*.p12
+
+# --- IOS ---
+/ios/Flutter/.last_build_id
+/ios/Flutter/App.framework
+/ios/Flutter/Flutter.framework
+/ios/Flutter/Generated.xcconfig
+/ios/Flutter/app.flx
+/ios/Flutter/app.zip
+/ios/Flutter/flutter_assets/
+/ios/ServiceDefinitions.json
+/ios/Runner/GeneratedPluginRegistrant.*
+
+# --- CocoaPods ---
+/ios/Pods/
+/ios/Podfile.lock
+
+# --- Xcode kullanıcı verileri ---
+**/ios/*.mode1v3
+**/ios/*.mode2v3
+**/ios/*.moved-aside
+**/ios/*.pbxuser
+**/ios/*.perspectivev3
+**/ios/Runner.xcworkspace/userdata/
+**/ios/Runner.xcodeproj/project.xcworkspace/
+**/ios/Runner.xcodeproj/xcuserdata/
+
+# --- EDİTÖRLER & SİSTEM ---
+.idea/
+.vscode/
+*.swp
+.DS_Store
+thumbs.db
+
+# --- ÖZEL GİZLİ DOSYALAR (AdMob gerçek ID'ler) ---
+lib/services/ad_secrets.dart

@@ -32,7 +32,7 @@ The core objective is to match words with their correct meanings under pressure.
 
 * **🎨 Aesthetic UI:** Warm "Papyrus" theme with smooth Flutter Animate transitions.
 * **🎮 Game Modes:**
-    * **Infinite Mode:** Survive with 3 lives.
+    * **Classic Mode:** Survive with 3 lives.
     * **Time Attack:** Race against the clock (30s - 3m).
     * **Word Count:** Sprint through 25-100 words.
     * **Custom Mode:** Play with your own vocabulary list.
@@ -85,7 +85,7 @@ En önemli özelliği **Özel Oyun Modu**dur; kullanıcılar kendi kelime listel
 
 * **🎨 Estetik Arayüz:** Göz yormayan sıcak tema ve akıcı animasyonlar.
 * **🎮 Oyun Modları:**
-    * **Sonsuz Mod:** 3 can ile ne kadar ileri gidebileceğinizi görün.
+    * **Klasik Mod:** 3 can ile ne kadar ileri gidebileceğinizi görün.
     * **Zamana Karşı:** Süreye karşı yarışın.
     * **Kelime Sayısı:** Belirli sayıda kelimeyi en hızlı sürede bitirin.
     * **Özel Mod:** Kendi kelimelerinizi ekleyin ve oynayın.

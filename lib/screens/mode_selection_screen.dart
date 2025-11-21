@@ -71,6 +71,7 @@ class _ModeSelectionScreenState extends State<ModeSelectionScreen> {
             )
         ],
       ),
+      
       body: ListView(
         padding: const EdgeInsets.all(20),
         children: [
@@ -134,7 +135,8 @@ class _ModeSelectionScreenState extends State<ModeSelectionScreen> {
     required String modeKey,
     required VoidCallback onTap
   }) {
-    int highScore = _scores[modeKey] ?? 0;
+    String scoreKey = widget.isCustom ? "custom_$modeKey" : modeKey;
+    int highScore = _scores[scoreKey] ?? 0;
 
     return Container(
       margin: const EdgeInsets.only(bottom: 15),
@@ -180,8 +182,7 @@ class _ModeSelectionScreenState extends State<ModeSelectionScreen> {
       c, 
       s.getText('select_duration'), 
       [30, 60, 120, 180], 
-      (val) => _difficultyFlow(c, s, GameMode.timeAttack, d: val),
-      limit: 300
+      (val) => _difficultyFlow(c, s, GameMode.timeAttack, d: val)
     );
   }
 
@@ -190,8 +191,7 @@ class _ModeSelectionScreenState extends State<ModeSelectionScreen> {
       c, 
       s.getText('select_count'), 
       [25, 50, 75, 100], 
-      (val) => _difficultyFlow(c, s, GameMode.wordCount, n: val),
-      limit: 300 
+      (val) => _difficultyFlow(c, s, GameMode.wordCount, n: val)
     );
   }
 
@@ -247,7 +247,7 @@ class _ModeSelectionScreenState extends State<ModeSelectionScreen> {
         ScaffoldMessenger.of(c).showSnackBar(
           SnackBar(
             content: Text(c.read<SettingsProvider>().getText('no_custom_words')),
-            backgroundColor: AppColors.wrongRed
+            backgroundColor: AppColors.wrongRed,
           )
         );
         return;
@@ -263,7 +263,7 @@ class _ModeSelectionScreenState extends State<ModeSelectionScreen> {
     Navigator.push(c, MaterialPageRoute(builder: (_) => const GameScreen()));
   }
 
-  void _showDialog(BuildContext ctx, String t, List<int> v, Function(int) sel, {int limit = 300}) {
+  void _showDialog(BuildContext ctx, String t, List<int> v, Function(int) sel) {
     final ctrl = TextEditingController();
     final s = ctx.read<SettingsProvider>();
     
@@ -294,10 +294,7 @@ class _ModeSelectionScreenState extends State<ModeSelectionScreen> {
                     content: TextField(
                       controller: ctrl,
                       keyboardType: TextInputType.number,
-                      decoration: const InputDecoration(
-                        hintText: "Max: 300", 
-                        border: OutlineInputBorder()
-                      ),
+                      decoration: const InputDecoration(hintText: "Max: 300", border: OutlineInputBorder()),
                     ),
                     actions: [
                       TextButton(
@@ -307,24 +304,16 @@ class _ModeSelectionScreenState extends State<ModeSelectionScreen> {
                       ElevatedButton(
                         onPressed: () {
                           int? val = int.tryParse(ctrl.text);
-                          
-                          
                           if(val != null && val > 0) {
-                            if (val > limit) {
-                              
-                              ScaffoldMessenger.of(ctx).showSnackBar(
-                                SnackBar(
-                                  content: Text(s.getText('max_input_error')), 
-                                  backgroundColor: AppColors.wrongRed,
-                                  duration: const Duration(seconds: 2),
-                                )
-                              );
-                            } else {
-                              
-                              Navigator.pop(dx);
-                              Navigator.pop(d); 
-                              sel(val);
-                            }
+                             if (val > 300) {
+                               ScaffoldMessenger.of(ctx).showSnackBar(
+                                 SnackBar(content: Text("Maksimum 300!"), backgroundColor: AppColors.wrongRed)
+                               );
+                             } else {
+                               Navigator.pop(dx);
+                               Navigator.pop(d);
+                               sel(val);
+                             }
                           }
                         },
                         child: Text(s.getText('ok'))

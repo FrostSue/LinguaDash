@@ -127,7 +127,9 @@ The developer reserves the right to modify game features at any time.
       'developer': 'Geliştirici',
       'version': 'Sürüm 1.0.0',
       'mail_subject': 'LinguaDash Destek',
-      'mail_error': 'Mail uygulaması bulunamadı.'
+      'mail_error': 'Mail uygulaması bulunamadı.',
+      'locked_title': 'Kilitli!',
+      'locked_msg': 'Özel Modu açmak için normal modların birinde en az 500 puan yapmalısın.',
     },
     'en': {
       'game_title': 'LinguaDash',
@@ -183,7 +185,9 @@ The developer reserves the right to modify game features at any time.
       'developer': 'Developer',
       'version': 'Version 1.0.0',
       'mail_subject': 'LinguaDash Support',
-      'mail_error': 'No email client found.'
+      'mail_error': 'No email client found.',
+      'locked_title': 'Locked!',
+      'locked_msg': 'You must score at least 500 points in any normal mode to unlock Custom Mode.',
     }
   };
 }

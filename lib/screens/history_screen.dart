@@ -25,18 +25,29 @@ class _HistoryScreenState extends State<HistoryScreen> {
     setState(() => _history = data);
   }
 
-  
   String _getTranslatedMode(String rawMode, SettingsProvider s) {
-    switch (rawMode) {
-      case 'timeAttack': return s.getText('time_attack');
-      case 'wordCount': return s.getText('word_count');
-      case 'classic': return s.getText('classic');
-      case 'custom': return s.getText('custom');
-      default: return rawMode.toUpperCase();
+    bool isCustom = false;
+    String modeKey = rawMode;
+    
+    if (rawMode.startsWith("custom_")) {
+      isCustom = true;
+      modeKey = rawMode.replaceAll("custom_", "");
     }
+
+    String modeName = "";
+    switch (modeKey) {
+      case 'timeAttack': modeName = s.getText('time_attack'); break;
+      case 'wordCount': modeName = s.getText('word_count'); break;
+      case 'classic': modeName = s.getText('classic'); break;
+      default: modeName = modeKey.toUpperCase();
+    }
+
+    if (isCustom) {
+      return "${s.getText('custom')} - $modeName";
+    }
+    return modeName;
   }
 
-  
   String _getTranslatedDiff(String? rawDiff, SettingsProvider s) {
     if (rawDiff == null) return "";
     return s.getText(rawDiff.toLowerCase());
@@ -48,8 +59,6 @@ class _HistoryScreenState extends State<HistoryScreen> {
     
     return Scaffold(
       backgroundColor: AppColors.background,
-      
-      
       bottomNavigationBar: const SafeArea(
         child: Padding(
           padding: EdgeInsets.only(bottom: 10),
@@ -59,7 +68,7 @@ class _HistoryScreenState extends State<HistoryScreen> {
       
       appBar: AppBar(
         title: Text(
-          settings.getText('history'), 
+          settings.getText('history'),
           style: TextStyle(color: AppColors.primaryPurple, fontFamily: settings.fontFamily)
         ),
         backgroundColor: Colors.transparent,
@@ -75,14 +84,13 @@ class _HistoryScreenState extends State<HistoryScreen> {
           )
         ]
       ),
-      
       body: _history.isEmpty
         ? Center(
             child: Text(
-              settings.getText('no_history'), 
+              settings.getText('no_history'),
               style: TextStyle(
-                fontFamily: settings.fontFamily, 
-                fontSize: 18, 
+                fontFamily: settings.fontFamily,
+                fontSize: 18,
                 color: AppColors.primaryPurple
               )
             )
@@ -92,7 +100,6 @@ class _HistoryScreenState extends State<HistoryScreen> {
             itemCount: _history.length,
             itemBuilder: (context, index) {
               final item = _history[index];
-              
               
               String modeText = _getTranslatedMode(item['mode'], settings);
               String diffText = _getTranslatedDiff(item['difficulty'], settings);
@@ -111,16 +118,19 @@ class _HistoryScreenState extends State<HistoryScreen> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text(
-                            fullTitle, 
-                            style: const TextStyle(
-                              fontWeight: FontWeight.bold, 
-                              fontSize: 16, 
-                              color: AppColors.primaryPurple
-                            )
+                          Expanded(
+                            child: Text(
+                              fullTitle,
+                              style: const TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 16,
+                                color: AppColors.primaryPurple
+                              ),
+                              overflow: TextOverflow.ellipsis,
+                            ),
                           ),
                           Text(
-                            item['date'], 
+                            item['date'],
                             style: TextStyle(color: Colors.grey[600], fontSize: 12)
                           ),
                         ],
@@ -130,10 +140,10 @@ class _HistoryScreenState extends State<HistoryScreen> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            "${settings.getText('score')}: ${item['score']}", 
+                            "${settings.getText('score')}: ${item['score']}",
                             style: const TextStyle(
-                              fontWeight: FontWeight.bold, 
-                              fontSize: 18, 
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18,
                               color: AppColors.secondaryTeal
                             )
                           ),

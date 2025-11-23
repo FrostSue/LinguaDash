@@ -39,14 +39,12 @@ class _ModeSelectionScreenState extends State<ModeSelectionScreen> {
 
     return Scaffold(
       backgroundColor: AppColors.background,
-      
       bottomNavigationBar: const SafeArea(
         child: Padding(
           padding: EdgeInsets.only(bottom: 10),
           child: BannerAdWidget(),
         ),
       ),
-      
       appBar: AppBar(
         title: Text(
           widget.isCustom ? settings.getText('custom') : settings.getText('select_mode'),
@@ -71,7 +69,6 @@ class _ModeSelectionScreenState extends State<ModeSelectionScreen> {
             )
         ],
       ),
-      
       body: ListView(
         padding: const EdgeInsets.all(20),
         children: [
@@ -135,6 +132,7 @@ class _ModeSelectionScreenState extends State<ModeSelectionScreen> {
     required String modeKey,
     required VoidCallback onTap
   }) {
+    
     String scoreKey = widget.isCustom ? "custom_$modeKey" : modeKey;
     int highScore = _scores[scoreKey] ?? 0;
 
@@ -176,13 +174,15 @@ class _ModeSelectionScreenState extends State<ModeSelectionScreen> {
     );
   }
 
+  
 
   void _timeFlow(BuildContext c, SettingsProvider s) {
     _showDialog(
       c, 
       s.getText('select_duration'), 
       [30, 60, 120, 180], 
-      (val) => _difficultyFlow(c, s, GameMode.timeAttack, d: val)
+      (val) => _difficultyFlow(c, s, GameMode.timeAttack, d: val),
+      limit: 300 
     );
   }
 
@@ -191,7 +191,8 @@ class _ModeSelectionScreenState extends State<ModeSelectionScreen> {
       c, 
       s.getText('select_count'), 
       [25, 50, 75, 100], 
-      (val) => _difficultyFlow(c, s, GameMode.wordCount, n: val)
+      (val) => _difficultyFlow(c, s, GameMode.wordCount, n: val),
+      limit: 300 
     );
   }
 
@@ -201,6 +202,7 @@ class _ModeSelectionScreenState extends State<ModeSelectionScreen> {
   }
 
   void _difficultyFlow(BuildContext c, SettingsProvider s, GameMode m, {int? d, int? n}) {
+    
     showDialog(
       context: c,
       builder: (ctx) => AlertDialog(
@@ -253,17 +255,20 @@ class _ModeSelectionScreenState extends State<ModeSelectionScreen> {
         return;
       }
     }
+    
+    
     c.read<GameProvider>().startGame(
-      mode: widget.isCustom ? GameMode.custom : m,
+      mode: m, 
       difficulty: diff,
-      useCustomWords: widget.isCustom,
+      useCustomWords: widget.isCustom, 
       duration: d,
       count: n
     );
+    
     Navigator.push(c, MaterialPageRoute(builder: (_) => const GameScreen()));
   }
 
-  void _showDialog(BuildContext ctx, String t, List<int> v, Function(int) sel) {
+  void _showDialog(BuildContext ctx, String t, List<int> v, Function(int) sel, {int limit = 300}) {
     final ctrl = TextEditingController();
     final s = ctx.read<SettingsProvider>();
     
@@ -277,7 +282,10 @@ class _ModeSelectionScreenState extends State<ModeSelectionScreen> {
           children: [
             ...v.map((val) => ListTile(
               title: Text("$val", style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
-              onTap: () { Navigator.pop(d); sel(val); },
+              onTap: () { 
+                Navigator.pop(d); 
+                sel(val); 
+              },
             )),
             const Divider(),
             ListTile(
@@ -286,7 +294,9 @@ class _ModeSelectionScreenState extends State<ModeSelectionScreen> {
                 style: const TextStyle(color: AppColors.secondaryTeal, fontWeight: FontWeight.bold)
               ),
               onTap: () {
-                Navigator.pop(d);
+                
+                
+                
                 showDialog(
                   context: ctx,
                   builder: (dx) => AlertDialog(
@@ -305,14 +315,15 @@ class _ModeSelectionScreenState extends State<ModeSelectionScreen> {
                         onPressed: () {
                           int? val = int.tryParse(ctrl.text);
                           if(val != null && val > 0) {
-                             if (val > 300) {
+                             if (val > limit) {
                                ScaffoldMessenger.of(ctx).showSnackBar(
-                                 SnackBar(content: Text("Maksimum 300!"), backgroundColor: AppColors.wrongRed)
+                                 SnackBar(content: Text(s.getText('max_input_error')), backgroundColor: AppColors.wrongRed)
                                );
                              } else {
-                               Navigator.pop(dx);
-                               Navigator.pop(d);
-                               sel(val);
+                               
+                               Navigator.pop(dx); 
+                               Navigator.pop(d);  
+                               sel(val);          
                              }
                           }
                         },

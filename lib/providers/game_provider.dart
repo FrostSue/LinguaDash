@@ -10,11 +10,16 @@ import '../services/storage_service.dart';
 import '../services/vibration_service.dart';
 
 class GameProvider extends ChangeNotifier {
+  
   GameMode activeMode = GameMode.classic;
   Difficulty currentDifficulty = Difficulty.easy;
-  bool _isCustomRun = false;
+  bool _isCustomRun = false; 
+  
+  
   List<Word> _words = [];
   List<String> _distractorPool = [];
+  
+  
   int _currentIndex = 0;
   Word? currentQuestion;
   List<String> currentOptions = [];
@@ -23,24 +28,36 @@ class GameProvider extends ChangeNotifier {
   int correctCount = 0;
   int wrongCount = 0;
   int lives = 3;
+
+  
   int timeAttackDuration = 60; 
   int targetWordCount = 25;
   final double _defaultQuestionTime = 4.0;
+
+  
   Timer? _timer;
   double timeLeft = 0;
   double totalTime = 0;
   bool isTimerRunning = false;
+
+  
   bool showFeedback = false;
   bool isProcessing = false;
   bool isGameOver = false;
   String? lastSelected;
   String? lastCorrect;
+  
+  
   int scoreDelta = 0; 
   int scoreChangeTrigger = 0;
 
   final StorageService _storage = StorageService();
 
   double get timeFraction => totalTime > 0 ? timeLeft / totalTime : 0;
+
+  
+  
+  
   Future<void> startGame({
     required GameMode mode, 
     required Difficulty difficulty,
@@ -50,9 +67,13 @@ class GameProvider extends ChangeNotifier {
   }) async {
     _timer?.cancel();
     
+    
+    
+    
+    
     activeMode = mode;
     currentDifficulty = difficulty;
-    _isCustomRun = useCustomWords; 
+    _isCustomRun = useCustomWords;
     
     score = 0;
     correctCount = 0;
@@ -63,9 +84,10 @@ class GameProvider extends ChangeNotifier {
     showFeedback = false;
     isTimerRunning = false;
 
+    
     if (mode == GameMode.timeAttack) {
       timeAttackDuration = duration ?? 60;
-      lives = 9999;
+      lives = 9999; 
       totalTime = timeAttackDuration.toDouble();
       timeLeft = totalTime;
     } else if (mode == GameMode.wordCount) {
@@ -73,6 +95,7 @@ class GameProvider extends ChangeNotifier {
       lives = 3;
       totalTime = 0;
     } else {
+      
       lives = 3;
       totalTime = _defaultQuestionTime;
     }
@@ -95,30 +118,42 @@ class GameProvider extends ChangeNotifier {
     
     if (useCustom) {
       List<Word> customWords = await _storage.loadCustomWords();
+      
       _words = List.from(customWords);
+      
+      
       _distractorPool = [
         ...customWords.map((e) => e.meaning),
         ...systemWords.map((e) => e.meaning)
       ];
     } else {
+      
       _words = List.from(systemWords);
       _distractorPool = systemWords.map((e) => e.meaning).toList();
     }
     _words.shuffle();
   }
+
+  
+  
+  
   void nextRound() {
     if (isGameOver) return;
 
+    
     if (activeMode == GameMode.wordCount && correctCount >= targetWordCount) {
       finishGame();
       return;
     }
 
+    
     if (_currentIndex >= _words.length) {
-      if (activeMode == GameMode.wordCount || _words.length < 5) {
+      
+      if (activeMode == GameMode.wordCount || _isCustomRun) {
          finishGame();
          return;
       }
+      
       _words.shuffle();
       _currentIndex = 0;
     }
@@ -144,6 +179,7 @@ class GameProvider extends ChangeNotifier {
     if (currentQuestion == null) return;
     
     final distractors = _distractorPool.where((m) => m != currentQuestion!.meaning).toList();
+    
     int takeCount = 3;
     if (distractors.length < 3) takeCount = distractors.length;
     
@@ -152,6 +188,10 @@ class GameProvider extends ChangeNotifier {
     options.shuffle();
     currentOptions = options;
   }
+
+  
+  
+  
   void _startQuestionTimer() {
     _timer?.cancel();
     timeLeft = _defaultQuestionTime;
@@ -186,6 +226,10 @@ class GameProvider extends ChangeNotifier {
       }
     });
   }
+
+  
+  
+  
   void submitAnswer(String answer) {
     if (isProcessing) return;
     if (activeMode != GameMode.timeAttack) _timer?.cancel();
@@ -232,6 +276,7 @@ class GameProvider extends ChangeNotifier {
     Future.delayed(const Duration(milliseconds: 1500), () {
       if (!isGameOver) nextRound();
     });
+    
     notifyListeners();
   }
 
@@ -242,11 +287,7 @@ class GameProvider extends ChangeNotifier {
     scoreChangeTrigger++;
   }
 
-  void pauseGame() {
-    _timer?.cancel();
-    isTimerRunning = false;
-    notifyListeners();
-  }
+  void pauseGame() { _timer?.cancel(); isTimerRunning = false; notifyListeners(); }
 
   void resumeGame() {
     if (isGameOver) return;
@@ -266,6 +307,7 @@ class GameProvider extends ChangeNotifier {
     isGameOver = true;
     
     if (score > 0 || correctCount > 0) {
+       
        String modeKey = activeMode.toString().split('.').last;
        if (_isCustomRun) {
          modeKey = "custom_$modeKey";
@@ -274,7 +316,7 @@ class GameProvider extends ChangeNotifier {
        final entry = {
          "date": DateFormat('yyyy-MM-dd HH:mm').format(DateTime.now()),
          "score": score,
-         "mode": modeKey, 
+         "mode": modeKey,
          "correct": correctCount,
          "wrong": wrongCount,
          "difficulty": currentDifficulty.name

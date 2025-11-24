@@ -45,7 +45,7 @@ android {
     defaultConfig {
         applicationId = "com.frostsue.linguadash"
         minSdk = flutter.minSdkVersion
-        targetSdk = 34
+        targetSdk = 35
         versionCode = flutterVersionCode.toInt()
         versionName = flutterVersionName
     }

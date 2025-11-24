@@ -34,7 +34,7 @@ The core objective is to match words with their correct meanings under pressure 
 
 * **🎨 Aesthetic UI:** A warm, eye-friendly "Papyrus" theme with smooth animations (Flutter Animate).
 * **🎮 4 Unique Game Modes:**
-    * **Infinite Mode:** Test your endurance with 3 lives.
+    * **Classic Mode:** Test your endurance with 3 lives.
     * **Time Attack:** Race against the clock (30s - 3m). No lives, just speed.
     * **Word Count:** Sprint through 25, 50, 75, or 100 words.
     * **Custom Mode:** Add your own words manually and play with your personalized deck.
@@ -124,7 +124,7 @@ Temel amaç, verilen kelimeleri doğru anlamlarıyla baskı altında (süre veya
 
 * **🎨 Estetik Arayüz:** Göz yormayan sıcak tema ve akıcı animasyonlar.
 * **🎮 4 Farklı Oyun Modu:**
-    * **Sonsuz Mod:** 3 can ile ne kadar ileri gidebileceğinizi görün.
+    * **Klasik Mod:** 3 can ile ne kadar ileri gidebileceğinizi görün.
     * **Zamana Karşı:** Süreye karşı yarışın (30sn - 3dk). Can derdi yok, sadece hız!
     * **Kelime Sayısı:** Belirli sayıda kelimeyi en hızlı sürede bitirin.
     * **Özel Mod:** Kendi kelimelerinizi ekleyin ve kişisel havuzunuzla oynayın.

@@ -6,16 +6,29 @@ class AdService {
   factory AdService() => _instance;
   AdService._internal();
 
+  
+  
+  
+  static const bool _adsEnabled = false; 
+
   InterstitialAd? _interstitialAd;
   int _gameOverCounter = 0;
-  final int _adFrequency = 3; 
+  final int _adFrequency = 3;
+
+  
+  bool get areAdsEnabled => _adsEnabled;
 
   Future<void> init() async {
+    
+    if (!_adsEnabled) return;
+
     await MobileAds.instance.initialize();
     _loadInterstitial();
   }
 
   void _loadInterstitial() {
+    if (!_adsEnabled) return; 
+
     InterstitialAd.load(
       adUnitId: AdHelper.interstitialAdUnitId,
       request: const AdRequest(),
@@ -25,7 +38,7 @@ class AdService {
           _interstitialAd!.fullScreenContentCallback = FullScreenContentCallback(
             onAdDismissedFullScreenContent: (ad) {
               ad.dispose();
-              _loadInterstitial(); 
+              _loadInterstitial();
             },
             onAdFailedToShowFullScreenContent: (ad, err) {
               ad.dispose();
@@ -41,8 +54,9 @@ class AdService {
     );
   }
 
-  
   void showInterstitialIfReady() {
+    if (!_adsEnabled) return; 
+
     _gameOverCounter++;
     if (_gameOverCounter >= _adFrequency) {
       if (_interstitialAd != null) {

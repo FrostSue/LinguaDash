@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 import 'package:path_provider/path_provider.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../models/word.dart';
 
 class StorageService {
@@ -13,14 +14,48 @@ class StorageService {
     return '${directory.path}/$fileName';
   }
 
+  Future<int> getStreak() async {
+    final prefs = await SharedPreferences.getInstance();
+    return prefs.getInt('daily_streak') ?? 0;
+  }
+
+  Future<void> updateStreak() async {
+    final prefs = await SharedPreferences.getInstance();
+    final lastDateStr = prefs.getString('last_played_date');
+    int currentStreak = prefs.getInt('daily_streak') ?? 0;
+    final now = DateTime.now();
+    final todayStr = "${now.year}-${now.month}-${now.day}";
+
+    if (lastDateStr == todayStr) {
+      return;
+    }
+
+    if (lastDateStr != null) {
+      final lastDate = DateTime.parse(lastDateStr);
+      final difference = now.difference(lastDate).inDays;
+
+      if (difference == 1) {
+        currentStreak++;
+      } else {
+        currentStreak = 1;
+      }
+    } else {
+      currentStreak = 1;
+    }
+
+    await prefs.setString('last_played_date', todayStr);
+    await prefs.setInt('daily_streak', currentStreak);
+  }
+
   Future<void> saveHistoryEntry(Map<String, dynamic> entry) async {
     final history = await loadHistory();
     history.insert(0, entry);
     final path = await _getFilePath('history.json');
-    await File(path).writeAsString(json.encode(history));
+    final file = File(path);
+    await file.writeAsString(json.encode(history));
     await _checkAndSaveHighScore(entry['mode'], entry['score']);
+    await updateStreak();
   }
-
   Future<List<dynamic>> loadHistory() async {
     try {
       final path = await _getFilePath('history.json');

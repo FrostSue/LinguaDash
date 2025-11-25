@@ -1,21 +1,20 @@
 import 'package:flutter/material.dart';
 
 class AppColors {
-  static const Color background = Color(0xFFF5E6D3); 
-  
-  static const Color primaryPurple = Color(0xFF4A2C40); 
-  static const Color secondaryTeal = Color(0xFF2E8B57); 
-  static const Color correctGreen = Color(0xFF228B22);  
-  static const Color wrongRed = Color(0xFFB22222);      
-  
-  
+  static const Color background = Color(0xFFF5E6D3);
+  static const Color primaryPurple = Color(0xFF4A2C40);
+  static const Color secondaryTeal = Color(0xFF2E8B57);
+  static const Color correctGreen = Color(0xFF228B22);
+  static const Color wrongRed = Color(0xFFB22222);
+
+
   static const Color white = Color(0xFFFFFFFF);
   static const Color black = Color(0xFF1A1A1A);
-  static const Color cardColor = Color(0xFFFFFAF0);     
+  static const Color cardColor = Color(0xFFFFFAF0);
 }
 
 class AppTexts {
-  
+
   static const String privacyPolicyTr = """
 GİZLİLİK POLİTİKASI
 Son Güncelleme: 2025
@@ -72,6 +71,65 @@ LinguaDash is a fun tool for language learning. While every effort is made to en
 The developer reserves the right to modify game features at any time.
 """;
 
+  static const Map<String, List<String>> owlTips = {
+'tr': [
+      // Motivasyon
+      "Her gün 5 dakika ayırmak hafızanı uçurur! 🚀",
+      "Hata yapmaktan korkma, öğrenmenin en iyi yolu bu! 🦉",
+      "Bugün harika gidiyorsun, sakın durma! 🔥",
+      "Serini bozmamak için yarın yine gel! 📅",
+      "Bir dil, bir insan demektir. Devam et! 🌍",
+      "Başarı, her gün tekrarlanan küçük çabaların toplamıdır. ✨",
+      "Pes etmediğin sürece asla kaybetmezsin. 💪",
+      
+      // Oyun İpuçları
+      "Zamana Karşı modunda panik yapma, derin nefes al. 🧘",
+      "Klasik Modda canlarını idareli kullan! ❤️",
+      "Özel Mod ile kendi sınavına hazırlanabilirsin. 📝",
+      "500 puan topla, Özel Modun kilidini aç! 🔓",
+      "Yanlışlarını 'Geçmiş' ekranından inceleyebilirsin. 📜",
+      "Skorunu arkadaşlarınla paylaş, rekabet et! 🏆",
+      
+      // İngilizce Bilgileri & Eğlence
+      "İngilizce'de en çok kullanılan kelime 'the'dır. 🤓",
+      "Ben gece kușuyum ama sen erken uyu. 🌙",
+      "Yeni kelimeleri sesli tekrar etmek akılda tutmayı kolaylaştırır. 🗣️",
+      "Film izlerken altyazıları İngilizce yapmayı dene! 🎬",
+      "Gözlerim üzerinizde, doğru şıkkı seç! 👀",
+      "'Queue' kelimesi 'Q' gibi okunur, gerisi süs! 😂",
+      "Kelime hazineni geliştirmek senin elinde.",
+      "Hoo! Hoo! Sıradaki kelimeyi bilebilecek misin?",
+    ],
+    'en': [
+      // Motivation
+      "Just 5 minutes a day boosts your memory! 🚀",
+      "Don't fear mistakes, it's the best way to learn! 🦉",
+      "You're doing great today, keep going! 🔥",
+      "Come back tomorrow to keep your streak alive! 📅",
+      "A new language is a new life. Keep it up! 🌍",
+      "Success is the sum of small efforts repeated daily. ✨",
+      "You never lose unless you quit. 💪",
+      
+      // Game Tips
+      "Don't panic in Time Attack, take a deep breath. 🧘",
+      "Save your lives in Classic Mode! ❤️",
+      "Use Custom Mode to study for your exams. 📝",
+      "Score 500 points to unlock Custom Mode! 🔓",
+      "Check your mistakes in the 'History' screen. 📜",
+      "Share your score and challenge your friends! 🏆",
+      
+      // Facts & Fun
+      "The most used word in English is 'the'. 🤓",
+      "I'm a night owl, but you should sleep early. 🌙",
+      "Repeating words out loud helps you remember them. 🗣️",
+      "Try watching movies with English subtitles! 🎬",
+      "I'm watching you, pick the right one! 👀",
+      "'Queue' is just 'Q' followed by four silent vowels! 😂",
+      "Expanding your vocabulary is in your hands.",
+      "Hoo! Hoo! Can you guess the next word?",
+    ]
+  };
+
   static Map<String, Map<String, String>> translations = {
     'tr': {
       'game_title': 'LinguaDash',
@@ -79,7 +137,7 @@ The developer reserves the right to modify game features at any time.
       'play': 'OYNA',
       'settings': 'AYARLAR',
       'history': 'OYUN GEÇMIŞI',
-      'main_menu': 'ANA MENÜ', 
+      'main_menu': 'ANA MENÜ',
       'quit': 'ÇIKIŞ',
       'loading': 'Yükleniyor...',
       'score': 'Puan',
@@ -106,8 +164,8 @@ The developer reserves the right to modify game features at any time.
       'best_score': 'En Yüksek Skor: ',
       'edit_words': 'Kelimeleri Düzenle',
       'custom_desc': 'Kendi kelimelerinle oyna! Eklemek için sağ üstteki ikona tıkla.',
-      'correct': 'Doğru', 
-      'wrong': 'Yanlış',  
+      'correct': 'Doğru',
+      'wrong': 'Yanlış',
       'no_custom_words': 'Kelime havuzu boş! Lütfen kelime ekleyin.',
       'no_history': 'Henüz oyun geçmişi yok.',
       'add_word_title': 'Kelime Ekle',
@@ -115,7 +173,7 @@ The developer reserves the right to modify game features at any time.
       'meaning_hint': 'Anlamı (Örn: Elma)',
       'add_btn': 'EKLE',
       'paused': 'DURAKLATILDI',
-      'other': 'Diğer...', 
+      'other': 'Diğer...',
       'enter_value': 'Değer Girin',
       'cancel': 'İptal',
       'ok': 'Tamam',
@@ -131,7 +189,8 @@ The developer reserves the right to modify game features at any time.
       'locked_title': 'Kilitli!',
       'locked_msg': 'Özel Modu açmak için normal modların birinde en az 500 puan yapmalısın.',
       'share_score': 'Skoru Paylaş',
-      'share_msg': 'LinguaDash\'te {score} puan yaptım! Beni geçebilir misin? 😎'
+      'share_msg': 'LinguaDash\'te {score} puan yaptım! Beni geçebilir misin? 😎',
+      'streak_label': 'SERi'
     },
     'en': {
       'game_title': 'LinguaDash',
@@ -191,7 +250,8 @@ The developer reserves the right to modify game features at any time.
       'locked_title': 'Locked!',
       'locked_msg': 'You must score at least 500 points in any normal mode to unlock Custom Mode.',
       'share_score': 'Share Score',
-      'share_msg': 'I scored {score} points in LinguaDash! Can you beat me? 😎'
+      'share_msg': 'I scored {score} points in LinguaDash! Can you beat me? 😎',
+      'streak_label': 'STREAK'
     }
   };
 }

@@ -130,6 +130,8 @@ The developer reserves the right to modify game features at any time.
       'mail_error': 'Mail uygulaması bulunamadı.',
       'locked_title': 'Kilitli!',
       'locked_msg': 'Özel Modu açmak için normal modların birinde en az 500 puan yapmalısın.',
+      'share_score': 'Skoru Paylaş',
+      'share_msg': 'LinguaDash\'te {score} puan yaptım! Beni geçebilir misin? 😎'
     },
     'en': {
       'game_title': 'LinguaDash',
@@ -188,6 +190,8 @@ The developer reserves the right to modify game features at any time.
       'mail_error': 'No email client found.',
       'locked_title': 'Locked!',
       'locked_msg': 'You must score at least 500 points in any normal mode to unlock Custom Mode.',
+      'share_score': 'Share Score',
+      'share_msg': 'I scored {score} points in LinguaDash! Can you beat me? 😎'
     }
   };
 }

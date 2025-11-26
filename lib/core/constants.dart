@@ -87,7 +87,6 @@ The developer reserves the right to modify game features at any time.
       "Klasik Modda canlarını idareli kullan! ❤️",
       "Özel Mod ile kendi sınavına hazırlanabilirsin. 📝",
       "500 puan topla, Özel Modun kilidini aç! 🔓",
-      "Yanlışlarını 'Geçmiş' ekranından inceleyebilirsin. 📜",
       "Skorunu arkadaşlarınla paylaş, rekabet et! 🏆",
       
       // İngilizce Bilgileri & Eğlence
@@ -115,7 +114,6 @@ The developer reserves the right to modify game features at any time.
       "Save your lives in Classic Mode! ❤️",
       "Use Custom Mode to study for your exams. 📝",
       "Score 500 points to unlock Custom Mode! 🔓",
-      "Check your mistakes in the 'History' screen. 📜",
       "Share your score and challenge your friends! 🏆",
       
       // Facts & Fun
@@ -189,8 +187,7 @@ The developer reserves the right to modify game features at any time.
       'locked_title': 'Kilitli!',
       'locked_msg': 'Özel Modu açmak için normal modların birinde en az 500 puan yapmalısın.',
       'share_score': 'Skoru Paylaş',
-      'share_msg': 'LinguaDash\'te {score} puan yaptım! Beni geçebilir misin? 😎',
-      'streak_label': 'SERi'
+      'share_msg': 'LinguaDash\'te {score} puan yaptım! Beni geçebilir misin? 😎'
     },
     'en': {
       'game_title': 'LinguaDash',
@@ -250,8 +247,7 @@ The developer reserves the right to modify game features at any time.
       'locked_title': 'Locked!',
       'locked_msg': 'You must score at least 500 points in any normal mode to unlock Custom Mode.',
       'share_score': 'Share Score',
-      'share_msg': 'I scored {score} points in LinguaDash! Can you beat me? 😎',
-      'streak_label': 'STREAK'
+      'share_msg': 'I scored {score} points in LinguaDash! Can you beat me? 😎'
     }
   };
 }

@@ -14,10 +14,9 @@ class _BannerAdWidgetState extends State<BannerAdWidget> {
   BannerAd? _bannerAd;
   bool _isLoaded = false;
 
-  @override
+@override
   void initState() {
     super.initState();
-    
     if (AdService().areAdsEnabled) {
       _loadAd();
     }
@@ -30,13 +29,14 @@ class _BannerAdWidgetState extends State<BannerAdWidget> {
       size: AdSize.banner,
       listener: BannerAdListener(
         onAdLoaded: (_) {
+          print("Banner Ad Loaded");
           setState(() {
             _isLoaded = true;
           });
         },
         onAdFailedToLoad: (ad, error) {
-          ad.dispose();
           print('Banner failed: $error');
+          ad.dispose();
         },
       ),
     )..load();

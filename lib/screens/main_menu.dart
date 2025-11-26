@@ -166,15 +166,6 @@ class _MainMenuState extends State<MainMenu> {
                       ],
                     ),
                   ),
-                  const SizedBox(height: 4),
-                  Text(
-                    s.getText('streak_label'),
-                    style: TextStyle(
-                      color: Colors.orange[800],
-                      fontWeight: FontWeight.bold,
-                      fontSize: 12
-                    )
-                  )
                 ],
               ),
             ),

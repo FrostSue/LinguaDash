@@ -8,66 +8,70 @@ import '../core/enums.dart';
 import '../models/word.dart';
 import '../services/storage_service.dart';
 import '../services/vibration_service.dart';
+import '../services/ad_service.dart';
 
 class GameProvider extends ChangeNotifier {
-
+  
   GameMode activeMode = GameMode.classic;
   Difficulty currentDifficulty = Difficulty.easy;
   bool _isCustomRun = false;
-
-
+  
+  
   List<Word> _words = [];
   List<String> _distractorPool = [];
-
-
+  
+  
   int _currentIndex = 0;
   Word? currentQuestion;
   List<String> currentOptions = [];
-
+  
   int score = 0;
   int correctCount = 0;
   int wrongCount = 0;
   int lives = 3;
 
-
-  int timeAttackDuration = 60;
+  
+  int timeAttackDuration = 60; 
   int targetWordCount = 25;
   final double _defaultQuestionTime = 4.0;
 
-
+  
   Timer? _timer;
   double timeLeft = 0;
   double totalTime = 0;
   bool isTimerRunning = false;
 
-
+  
   bool showFeedback = false;
   bool isProcessing = false;
   bool isGameOver = false;
   String? lastSelected;
   String? lastCorrect;
-
-
-  int scoreDelta = 0;
+  
+  
+  int scoreDelta = 0; 
   int scoreChangeTrigger = 0;
 
   final StorageService _storage = StorageService();
 
   double get timeFraction => totalTime > 0 ? timeLeft / totalTime : 0;
 
+  
+  
+  
   Future<void> startGame({
-    required GameMode mode,
+    required GameMode mode, 
     required Difficulty difficulty,
     required bool useCustomWords,
     int? duration,
     int? count
   }) async {
     _timer?.cancel();
-
+    
     activeMode = mode;
     currentDifficulty = difficulty;
     _isCustomRun = useCustomWords;
-
+    
     score = 0;
     correctCount = 0;
     wrongCount = 0;
@@ -79,7 +83,7 @@ class GameProvider extends ChangeNotifier {
 
     if (mode == GameMode.timeAttack) {
       timeAttackDuration = duration ?? 60;
-      lives = 9999;
+      lives = 9999; 
       totalTime = timeAttackDuration.toDouble();
       timeLeft = totalTime;
     } else if (mode == GameMode.wordCount) {
@@ -92,7 +96,7 @@ class GameProvider extends ChangeNotifier {
     }
 
     await _loadWords(useCustomWords);
-
+    
     if (_words.isEmpty) {
       isGameOver = true;
       notifyListeners();
@@ -106,11 +110,10 @@ class GameProvider extends ChangeNotifier {
     final jsonString = await rootBundle.loadString('assets/data/${currentDifficulty.filename}');
     final List<dynamic> jsonList = json.decode(jsonString);
     List<Word> systemWords = jsonList.map((e) => Word.fromJson(e)).toList();
-
+    
     if (useCustom) {
       List<Word> customWords = await _storage.loadCustomWords();
       _words = List.from(customWords);
-
       _distractorPool = [
         ...customWords.map((e) => e.meaning),
         ...systemWords.map((e) => e.meaning)
@@ -122,7 +125,9 @@ class GameProvider extends ChangeNotifier {
     _words.shuffle();
   }
 
-
+  
+  
+  
   void nextRound() {
     if (isGameOver) return;
 
@@ -142,49 +147,47 @@ class GameProvider extends ChangeNotifier {
 
     isProcessing = false;
     showFeedback = false;
-
+    
     currentQuestion = _words[_currentIndex];
     _currentIndex++;
-
+    
     _prepareOptions();
-
+    
     if (activeMode == GameMode.timeAttack) {
       if (!isTimerRunning) _startGlobalTimer();
     } else if (activeMode != GameMode.wordCount) {
       _startQuestionTimer();
     }
-
+    
     notifyListeners();
   }
 
-
   void _prepareOptions() {
     if (currentQuestion == null) return;
-    final uniqueDistractors = _distractorPool
+    
+    final distractors = _distractorPool
         .where((m) => m != currentQuestion!.meaning)
         .toSet()
         .toList();
-
-
-    uniqueDistractors.shuffle();
-
-
+    
+    distractors.shuffle();
+    
     int takeCount = 3;
-    if (uniqueDistractors.length < 3) takeCount = uniqueDistractors.length;
-
-
-    final options = [currentQuestion!.meaning, ...uniqueDistractors.take(takeCount)];
-
-
+    if (distractors.length < 3) takeCount = distractors.length;
+    
+    final options = [currentQuestion!.meaning, ...distractors.take(takeCount)];
     options.shuffle();
     currentOptions = options;
   }
 
+  
+  
+  
   void _startQuestionTimer() {
     _timer?.cancel();
     timeLeft = _defaultQuestionTime;
     totalTime = _defaultQuestionTime;
-
+    
     _timer = Timer.periodic(const Duration(milliseconds: 100), (timer) {
       if (isGameOver || isProcessing) {
         timer.cancel(); return;
@@ -201,7 +204,7 @@ class GameProvider extends ChangeNotifier {
   void _startGlobalTimer() {
     isTimerRunning = true;
     _timer?.cancel();
-
+    
     _timer = Timer.periodic(const Duration(milliseconds: 100), (timer) {
       if (isGameOver) {
         timer.cancel(); return;
@@ -215,6 +218,9 @@ class GameProvider extends ChangeNotifier {
     });
   }
 
+  
+  
+  
   void submitAnswer(String answer) {
     if (isProcessing) return;
     if (activeMode != GameMode.timeAttack) _timer?.cancel();
@@ -238,7 +244,7 @@ class GameProvider extends ChangeNotifier {
 
   void _handleWrong({required bool timeout}) {
     if (activeMode != GameMode.timeAttack) _timer?.cancel();
-
+    
     isProcessing = true;
     if (timeout) {
       lastSelected = "TIMEOUT";
@@ -249,7 +255,7 @@ class GameProvider extends ChangeNotifier {
     wrongCount++;
     _updateScore(-10);
     VibrationService().vibrateError();
-
+    
     if (activeMode != GameMode.timeAttack) {
       lives--;
       notifyListeners();
@@ -290,26 +296,36 @@ class GameProvider extends ChangeNotifier {
     notifyListeners();
   }
 
+  
+  
+  
   Future<void> finishGame() async {
     _timer?.cancel();
     isGameOver = true;
+    
+    
+    AdService().showInterstitialIfReady();
 
-    if (score > 0 || correctCount > 0) {
-       String modeKey = activeMode.toString().split('.').last;
-       if (_isCustomRun) {
-         modeKey = "custom_$modeKey";
-       }
-
-       final entry = {
-         "date": DateFormat('yyyy-MM-dd HH:mm').format(DateTime.now()),
-         "score": score,
-         "mode": modeKey,
-         "correct": correctCount,
-         "wrong": wrongCount,
-         "difficulty": currentDifficulty.name
-       };
-       await _storage.saveHistoryEntry(entry);
+    
+    
+    
+    
+    String modeKey = activeMode.toString().split('.').last;
+    if (_isCustomRun) {
+      modeKey = "custom_$modeKey";
     }
+
+    final entry = {
+      "date": DateFormat('yyyy-MM-dd HH:mm').format(DateTime.now()),
+      "score": score,
+      "mode": modeKey,
+      "correct": correctCount,
+      "wrong": wrongCount,
+      "difficulty": currentDifficulty.name
+    };
+    
+    await _storage.saveHistoryEntry(entry);
+    
     notifyListeners();
   }
 }

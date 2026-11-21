@@ -132,6 +132,7 @@ The developer reserves the right to modify game features at any time.
   static Map<String, Map<String, String>> translations = {
     'tr': {
       'game_title': 'LinguaDash',
+      'subtitle': 'Hızlı Kelime Oyunu',
       'select_mode': 'MOD SEÇ',
       'play': 'OYNA',
       'settings': 'AYARLAR',
@@ -192,6 +193,7 @@ The developer reserves the right to modify game features at any time.
     },
     'en': {
       'game_title': 'LinguaDash',
+      'subtitle': 'Speed Vocabulary Sprint',
       'select_mode': 'SELECT MODE',
       'play': 'PLAY',
       'settings': 'SETTINGS',

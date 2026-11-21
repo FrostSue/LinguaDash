@@ -1,341 +1,2286 @@
 [
-  {"word":"aberration","meaning":"sapma"},
-  {"word":"abstention","meaning":"çekimserlik"},
-  {"word":"acclimatization","meaning":"iklim uyumu"},
-  {"word":"accreditation","meaning":"akreditasyon"},
-  {"word":"acumen","meaning":"sezgi keskinliği"},
-  {"word":"adaptability","meaning":"uyum yeteneği"},
-  {"word":"adhesion","meaning":"yapışma"},
-  {"word":"adjournment","meaning":"erteleme"},
-  {"word":"adulation","meaning":"aşırı övgü"},
-  {"word":"affinity","meaning":"yakınlık"},
-  {"word":"alleviation","meaning":"hafifletme"},
-  {"word":"altercation","meaning":"tartışma"},
-  {"word":"amendment","meaning":"düzeltme"},
-  {"word":"animosity","meaning":"düşmanlık"},
-  {"word":"annexation","meaning":"ilhak"},
-  {"word":"antithesis","meaning":"karşıtlık"},
-  {"word":"apportionment","meaning":"paylaştırma"},
-  {"word":"arbitration","meaning":"arabuluculuk"},
-  {"word":"ascendancy","meaning":"üstünlük"},
-  {"word":"attrition","meaning":"yıpranma"},
-  {"word":"barometer","meaning":"barometre"},
-  {"word":"barricade","meaning":"barikat"},
-  {"word":"beatitude","meaning":"kutluluk"},
-  {"word":"befuddlement","meaning":"şaşkınlık"},
-  {"word":"bellicosity","meaning":"saldırganlık"},
-  {"word":"benevolence","meaning":"iyilikseverlik"},
-  {"word":"blasphemy","meaning":"küfür"},
-  {"word":"brevity","meaning":"kısalık"},
-  {"word":"buoyancy","meaning":"yüzdürme gücü"},
-  {"word":"bureaucratization","meaning":"bürokratikleşme"},
-  {"word":"cadence","meaning":"ritim"},
-  {"word":"calamity","meaning":"felaket"},
-  {"word":"callousness","meaning":"duygusuzluk"},
-  {"word":"camaraderie","meaning":"yoldaşlık"},
-  {"word":"capitulation","meaning":"teslimiyet"},
-  {"word":"catharsis","meaning":"arınma"},
-  {"word":"causation","meaning":"neden olma"},
-  {"word":"celerity","meaning":"çabukluk"},
-  {"word":"censure","meaning":"kınama"},
-  {"word":"circumspection","meaning":"ihtiyat"},
-  {"word":"clarification","meaning":"açıklığa kavuşturma"},
-  {"word":"coercion","meaning":"zorlama"},
-  {"word":"collusion","meaning":"işbirliği (gizli)"},
-  {"word":"commiseration","meaning":"acısını paylaşma"},
-  {"word":"commutation","meaning":"ceza indirimi"},
-  {"word":"concurrence","meaning":"uyuşma"},
-  {"word":"conflagration","meaning":"büyük yangın"},
-  {"word":"conglomeration","meaning":"yığın"},
-  {"word":"convalescence","meaning":"iyileşme dönemi"},
-  {"word":"convocation","meaning":"toplantıya çağrı"},
-  {"word":"correlation","meaning":"ilişki"},
-  {"word":"corroboration","meaning":"doğrulama"},
-  {"word":"cosmopolitanism","meaning":"kozmopolitlik"},
-  {"word":"countermeasure","meaning":"karşı önlem"},
-  {"word":"cumulativeness","meaning":"birikimlilik"},
-  {"word":"curtailment","meaning":"kısma"},
-  {"word":"cyclical","meaning":"döngüsel"},
-  {"word":"cynicism","meaning":"alaycılık"},
-  {"word":"cytology","meaning":"hücre bilimi"},
-  {"word":"circuitry","meaning":"devre sistemi"},
-  {"word":"debauchery","meaning":"sefahat"},
-  {"word":"debunking","meaning":"çürütme"},
-  {"word":"decentralization","meaning":"merkezsizleşme"},
-  {"word":"decimation","meaning":"imha"},
-  {"word":"declamation","meaning":"nutuk"},
-  {"word":"decorum","meaning":"ağırlık"},
-  {"word":"defamation","meaning":"itibarsızlaştırma"},
-  {"word":"deficiency","meaning":"eksiklik"},
-  {"word":"degeneracy","meaning":"bozulma"},
-  {"word":"dehumanization","meaning":"insanlıktan çıkarma"},
-  {"word":"delegitimization","meaning":"meşruluğun kaybı"},
-  {"word":"deliberation","meaning":"müzakere"},
-  {"word":"delusion","meaning":"yanılsama"},
-  {"word":"demarcation","meaning":"sınır çizme"},
-  {"word":"delineation","meaning":"tasvir"},
-  {"word":"demographics","meaning":"demografi"},
-  {"word":"denigration","meaning":"kötüleme"},
-  {"word":"denouement","meaning":"çözülme"},
-  {"word":"depredation","meaning":"yağmalama"},
-  {"word":"dereliction","meaning":"terk edilmişlik"},
-  {"word":"despotism","meaning":"despotluk"},
-  {"word":"deterrence","meaning":"caydırıcılık"},
-  {"word":"detriment","meaning":"zarar"},
-  {"word":"deviation","meaning":"sapma"},
-  {"word":"dexterity","meaning":"beceri"},
-  {"word":"diatribe","meaning":"sert eleştiri"},
-  {"word":"digression","meaning":"konu dışına çıkma"},
-  {"word":"diligence","meaning":"çalışkanlık"},
-  {"word":"diminution","meaning":"azalma"},
-  {"word":"diplomacy","meaning":"diplomasi"},
-  {"word":"discontent","meaning":"memnuniyetsizlik"},
-  {"word":"discrepancy","meaning":"tutarsızlık"},
-  {"word":"disenfranchisement","meaning":"haklardan mahrum bırakma"},
-  {"word":"disintegration","meaning":"parçalanma"},
-  {"word":"disparity","meaning":"eşitsizlik"},
-  {"word":"disposition","meaning":"eğilim"},
-  {"word":"dissemination","meaning":"yayma"},
-  {"word":"dissonance","meaning":"uyumsuzluk"},
-  {"word":"distortion","meaning":"bozulma"},
-  {"word":"divergence","meaning":"ayrışma"},
-  {"word":"elucidation","meaning":"aydınlatma"},
-  {"word":"embellishment","meaning":"süsleme"},
-  {"word":"embodiment","meaning":"somutlaştırma"},
-  {"word":"emulation","meaning":"taklit etme"},
-  {"word":"enactment","meaning":"yürürlüğe koyma"},
-  {"word":"enclave","meaning":"bölge (yabancı)"},
-  {"word":"encroachment","meaning":"tecavüz"},
-  {"word":"endowment","meaning":"bağış"},
-  {"word":"enervation","meaning":"zayıflama"},
-  {"word":"enigma","meaning":"gizem"},
-  {"word":"enslavement","meaning":"esir alma"},
-  {"word":"entanglement","meaning":"karmaşa"},
-  {"word":"enthrallment","meaning":"büyülenme"},
-  {"word":"entrepreneurship","meaning":"girişimcilik"},
-  {"word":"enumeration","meaning":"sayma"},
-  {"word":"enunciation","meaning":"telaffuz"},
-  {"word":"epicenter","meaning":"merkez (deprem)"},
-  {"word":"epiphany","meaning":"ani farkındalık"},
-  {"word":"epitome","meaning":"öz"},
-  {"word":"equanimity","meaning":"sükunet"},
-  {"word":"equidistance","meaning":"eş uzaklık"},
-  {"word":"eradication","meaning":"yok etme"},
-  {"word":"escalation","meaning":"tırmanış"},
-  {"word":"espionage","meaning":"casusluk"},
-  {"word":"estuary","meaning":"nehir ağzı"},
-  {"word":"ethnography","meaning":"etnografi"},
-  {"word":"euphoria","meaning":"coşku"},
-  {"word":"exacerbation","meaning":"kötüleşme"},
-  {"word":"exaltation","meaning":"yüceltme"},
-  {"word":"excavation","meaning":"kazı"},
-  {"word":"exchequer","meaning":"maliye hazinesi"},
-  {"word":"excommunication","meaning":"aforoz"},
-  {"word":"exhilaration","meaning":"neşe"},
-  {"word":"exoneration","meaning":"aklanma"},
-  {"word":"expatriation","meaning":"sürgün"},
-  {"word":"exploration","meaning":"keşif"},
-  {"word":"expropriation","meaning":"kamulaştırma"},
-  {"word":"extemporization","meaning":"doğaçlama"},
-  {"word":"extenuation","meaning":"hafifletme"},
-  {"word":"extortion","meaning":"şantaj"},
-  {"word":"factionalism","meaning":"gruplaşma"},
-  {"word":"fallibility","meaning":"yanılabilirlik"},
-  {"word":"fastidiousness","meaning":"titizlik"},
-  {"word":"fatalism","meaning":"kadercilik"},
-  {"word":"feasibility","meaning":"yapılabilirlik"},
-  {"word":"felicity","meaning":"mutluluk"},
-  {"word":"ferocity","meaning":"vahşilik"},
-  {"word":"fluctuation","meaning":"dalgalanma"},
-  {"word":"fortification","meaning":"tahkimat"},
-  {"word":"foundation","meaning":"temel"},
-  {"word":"fragmentation","meaning":"parçalanma"},
-  {"word":"fraternity","meaning":"kardeşlik"},
-  {"word":"frivolity","meaning":"ciddiyetsizlik"},
-  {"word":"furtherance","meaning":"ilerletme"},
-  {"word":"futurism","meaning":"fütürizm"},
-  {"word":"galvanization","meaning":"uyarma"},
-  {"word":"garnishment","meaning":"haciz"},
-  {"word":"gentrification","meaning":"soylulaştırma"},
-  {"word":"germination","meaning":"filizlenme"},
-  {"word":"glorification","meaning":"yüceltme"},
-  {"word":"gradation","meaning":"derecelendirme"},
-  {"word":"gratification","meaning":"tatmin"},
-  {"word":"gravitation","meaning":"çekim"},
-  {"word":"gregariousness","meaning":"sosyallik"},
-  {"word":"gridlock","meaning":"kilitlenme"},
-  {"word":"habituation","meaning":"alışma"},
-  {"word":"hallucination","meaning":"halüsinasyon"},
-  {"word":"harbinger","meaning":"habercisi"},
-  {"word":"harmonization","meaning":"uyumlaştırma"},
-  {"word":"hedonism","meaning":"hazcılık"},
-  {"word":"hegemonic","meaning":"egemen"},
-  {"word":"heritage","meaning":"miras"},
-  {"word":"hierarchy","meaning":"hiyerarşi"},
-  {"word":"hindrance","meaning":"engel"},
-  {"word":"hypothesis","meaning":"hipotez"},
-  {"word":"iconography","meaning":"ikonografi"},
-  {"word":"ideation","meaning":"düşünce üretimi"},
-  {"word":"idiosyncrasy","meaning":"kişisel özellik"},
-  {"word":"ignominy","meaning":"aşağılama"},
-  {"word":"illumination","meaning":"aydınlatma"},
-  {"word":"immersion","meaning":"dalmışlık"},
-  {"word":"impermanence","meaning":"geçicilik"},
-  {"word":"impetuosity","meaning":"acelecilik"},
-  {"word":"implication","meaning":"ima"},
-  {"word":"improvisation","meaning":"doğaçlama"},
-  {"word":"incantation","meaning":"büyü okuma"},
-  {"word":"incapacitation","meaning":"etkisiz hale getirme"},
-  {"word":"incarceration","meaning":"hapsedilme"},
-  {"word":"incidence","meaning":"görülme sıklığı"},
-  {"word":"inception","meaning":"başlangıç"},
-  {"word":"incineration","meaning":"yakma"},
-  {"word":"inclination","meaning":"eğilim"},
-  {"word":"incoherence","meaning":"tutarsızlık"},
-  {"word":"incompatibility","meaning":"uyumsuzluk"},
-  {"word":"incongruity","meaning":"uygunsuzluk"},
-  {"word":"incubation","meaning":"kuluçka"},
-  {"word":"indignation","meaning":"öfkelenme"},
-  {"word":"indoctrination","meaning":"beyin yıkama"},
-  {"word":"ineptitude","meaning":"beceriksizlik"},
-  {"word":"inference","meaning":"çıkarım"},
-  {"word":"infestation","meaning":"istila"},
-  {"word":"infiltration","meaning":"sızma"},
-  {"word":"inflammation","meaning":"iltihaplanma"},
-  {"word":"infraction","meaning":"ihlal"},
-  {"word":"ingenuity","meaning":"yaratıcılık"},
-  {"word":"inhibition","meaning":"baskı"},
-  {"word":"initialization","meaning":"başlatma"},
-  {"word":"inquisition","meaning":"sorgulama"},
-  {"word":"insinuation","meaning":"ima"},
-  {"word":"insolvency","meaning":"iflas"},
-  {"word":"instability","meaning":"dengesizlik"},
-  {"word":"insurrection","meaning":"ayaklanma"},
-  {"word":"integration","meaning":"entegrasyon"},
-  {"word":"interjection","meaning":"arayorum"},
-  {"word":"interpolation","meaning":"ara değer bulma"},
-  {"word":"interrogation","meaning":"sorgulama"},
-  {"word":"intervention","meaning":"müdahale"},
-  {"word":"intimidation","meaning":"gözdağı"},
-  {"word":"intuition","meaning":"sezgi"},
-  {"word":"inundation","meaning":"su baskını"},
-  {"word":"inventiveness","meaning":"yaratıcılık"},
-  {"word":"investigation","meaning":"soruşturma"},
-  {"word":"invigoration","meaning":"canlandırma"},
-  {"word":"irrefutability","meaning":"çürütülemezlik"},
-  {"word":"iteration","meaning":"yineleme"},
-  {"word":"jettison","meaning":"yük boşaltmak"},
-  {"word":"juxtaposition","meaning":"yan yana koyma"},
-  {"word":"jurisdiction","meaning":"yetki alanı"},
-  {"word":"kernel","meaning":"çekirdek yapı"},
-  {"word":"kinetics","meaning":"hareket bilimi"},
-  {"word":"knavery","meaning":"hilekârlık"},
-  {"word":"lamentation","meaning":"ağıt"},
-  {"word":"latency","meaning":"gecikme"},
-  {"word":"legitimacy","meaning":"meşruiyet"},
-  {"word":"lethargy","meaning":"uyuşukluk"},
-  {"word":"lexicon","meaning":"söz varlığı"},
-  {"word":"litigation","meaning":"dava süreci"},
-  {"word":"longevity","meaning":"uzun ömür"},
-  {"word":"lucidity","meaning":"açıklık"},
-  {"word":"luminosity","meaning":"ışıma"},
-  {"word":"magnanimity","meaning":"bağışlayıcılık"},
-  {"word":"malformation","meaning":"kusurlu oluşum"},
-  {"word":"malfeasance","meaning":"görevi kötüye kullanma"},
-  {"word":"manifestation","meaning":"belirme"},
-  {"word":"manipulation","meaning":"manipülasyon"},
-  {"word":"marginalization","meaning":"marjinalleştirme"},
-  {"word":"materialization","meaning":"maddileşme"},
-  {"word":"mediation","meaning":"arabuluculuk"},
-  {"word":"melancholy","meaning":"kara sevda"},
-  {"word":"metamorphosis","meaning":"başkalaşım"},
-  {"word":"methodology","meaning":"yöntembilim"},
-  {"word":"meticulousness","meaning":"titizlik"},
-  {"word":"microcosm","meaning":"küçük ölçekli evren"},
-  {"word":"militarization","meaning":"askerileştirme"},
-  {"word":"mobilization","meaning":"seferberlik"},
-  {"word":"modulation","meaning":"ayarlama"},
-  {"word":"monolith","meaning":"tek parça yapı"},
-  {"word":"moratorium","meaning":"erteleme"},
-  {"word":"multiplicity","meaning":"çokluk"},
-  {"word":"mutation","meaning":"mutasyon"},
-  {"word":"narration","meaning":"anlatım"},
-  {"word":"nexus","meaning":"bağlantı"},
-  {"word":"nomination","meaning":"adaylık"},
-  {"word":"nonchalance","meaning":"kaygısızlık"},
-  {"word":"normalization","meaning":"normalleşme"},
-  {"word":"nullification","meaning":"geçersiz kılma"},
-  {"word":"obfuscation","meaning":"belirsizleştirme"},
-  {"word":"obligation","meaning":"yükümlülük"},
-  {"word":"obsolescence","meaning":"modası geçme"},
-  {"word":"obstruction","meaning":"engelleme"},
-  {"word":"omission","meaning":"atlama"},
-  {"word":"omniscience","meaning":"her şeyi bilme"},
-  {"word":"oppression","meaning":"baskı"},
-  {"word":"orchestration","meaning":"organizasyon (ayarlama)"},
-  {"word":"oscillation","meaning":"salınım"},
-  {"word":"ostentation","meaning":"gösteriş"},
-  {"word":"overhaul","meaning":"yeniden düzenleme"},
-  {"word":"paradox","meaning":"çelişki"},
-  {"word":"paradigm","meaning":"kavramsal model"},
-  {"word":"parameter","meaning":"parametre"},
-  {"word":"parliamentarian","meaning":"parlamento üyesi"},
-  {"word":"partition","meaning":"bölünme"},
-  {"word":"pathology","meaning":"patoloji"},
-  {"word":"pedagogy","meaning":"öğretim bilimi"},
-  {"word":"penetration","meaning":"nüfuz etme"},
-  {"word":"permutation","meaning":"dizilim"},
-  {"word":"perpetuation","meaning":"devam ettirme"},
-  {"word":"pertinence","meaning":"ilgili olma"},
-  {"word":"phenomenon","meaning":"olgu"},
-  {"word":"philosophy","meaning":"felsefe"},
-  {"word":"plausibility","meaning":"mantıklılık"},
-  {"word":"polarization","meaning":"kutuplaşma"},
-  {"word":"portfolio","meaning":"portföy"},
-  {"word":"postulation","meaning":"varsayım"},
-  {"word":"precipitation","meaning":"çökelme"},
-  {"word":"premonition","meaning":"içine doğma"},
-  {"word":"preservation","meaning":"koruma"},
-  {"word":"prevalence","meaning":"yaygınlık"},
-  {"word":"propensity","meaning":"yatkınlık"},
-  {"word":"prosecution","meaning":"kovuşturma"},
-  {"word":"protraction","meaning":"uzatma"},
-  {"word":"qualification","meaning":"nitelik"},
-  {"word":"quantification","meaning":"nicelik belirleme"},
-  {"word":"quarantine","meaning":"karantina"},
-  {"word":"query","meaning":"soru"},
-  {"word":"rationalization","meaning":"aklileştirme"},
-  {"word":"reallocation","meaning":"yeniden tahsis"},
-  {"word":"recapitulation","meaning":"özetleme"},
-  {"word":"reconstruction","meaning":"yeniden yapılandırma"},
-  {"word":"rectification","meaning":"düzeltme"},
-  {"word":"reformation","meaning":"yenilenme"},
-  {"word":"rejuvenation","meaning":"gençleşme"},
-  {"word":"relinquishment","meaning":"bırakma"},
-  {"word":"repercussion","meaning":"yansıma"},
-  {"word":"requisition","meaning":"talep"},
-
-  {"word":"resonance","meaning":"titreşim"},
-  {"word":"restitution","meaning":"tazmin"},
-  {"word":"segregation","meaning":"ayrım"},
-  {"word":"subordination","meaning":"bağlı kılma"},
-  {"word":"transgression","meaning":"kurala aykırılık"},
-  {"word":"ambiguity","meaning":"belirsizlik, iki anlamlılık"},
-  {"word":"cognitive","meaning":"bilişsel, zihinsel"},
-  {"word":"concurrency","meaning":"eşzamanlılık"},
-  {"word":"deterministic","meaning":"belirlenimci"},
-  {"word":"dichotomy","meaning":"ikilik, çatallanma"},
-  {"word":"empirical","meaning":"deneysel, ampirik"},
-  {"word":"epistemology","meaning":"bilgi felsefesi"},
-  {"word":"equilibrium","meaning":"denge durumu"},
-  {"word":"heterogeneous","meaning":"çok türlü, heterojen"},
-  {"word":"idempotent","meaning":"aynı sonucu veren, tekil kuvvetli"},
-  {"word":"invariance","meaning":"değişmezlik"},
-  {"word":"juxtaposition","meaning":"yan yana koyma, karşılaştırma"},
-  {"word":"paradigm","meaning":"düşünce modeli, paradigma"},
-  {"word":"resilience","meaning":"toparlanma gücü, dirençlilik"},
-  {"word":"serendipity","meaning":"tesadüfi keşif, şans eseri buluş"},
-  {"word":"ubiquitous","meaning":"her yerde hazır bulunan"},
-  {"word":"veracity","meaning":"doğruluk, hakikat"},
-  {"word":"volatility","meaning":"oynaklık, uçuculuk"}
+  {
+    "word": "inevitable",
+    "meaning": "kaçınılmaz"
+  },
+  {
+    "word": "reluctant",
+    "meaning": "isteksiz, gönülsüz"
+  },
+  {
+    "word": "persuade",
+    "meaning": "ikna etmek"
+  },
+  {
+    "word": "adequate",
+    "meaning": "yeterli, kafi"
+  },
+  {
+    "word": "comprehensive",
+    "meaning": "kapsamlı, geniş çaplı"
+  },
+  {
+    "word": "subtle",
+    "meaning": "ince, hemen göze çarpmayan"
+  },
+  {
+    "word": "thrive",
+    "meaning": "gelişmek, serpilmek"
+  },
+  {
+    "word": "diligent",
+    "meaning": "çalışkan, özenli"
+  },
+  {
+    "word": "coherent",
+    "meaning": "tutarlı, uyumlu"
+  },
+  {
+    "word": "feasible",
+    "meaning": "uygulanabilir, yapılabilir"
+  },
+  {
+    "word": "vulnerable",
+    "meaning": "savunmasız, hassas"
+  },
+  {
+    "word": "profound",
+    "meaning": "derin, etkileyici"
+  },
+  {
+    "word": "ambiguous",
+    "meaning": "belirsiz, muğlak"
+  },
+  {
+    "word": "pragmatic",
+    "meaning": "pratik, uygulamacı"
+  },
+  {
+    "word": "lucid",
+    "meaning": "açık, anlaşılır, berrak"
+  },
+  {
+    "word": "resilient",
+    "meaning": "dayanıklı, toparlanabilen"
+  },
+  {
+    "word": "persistent",
+    "meaning": "ısrarcı, sebatkar"
+  },
+  {
+    "word": "versatile",
+    "meaning": "çok yönlü, becerikli"
+  },
+  {
+    "word": "meticulous",
+    "meaning": "titiz, kılı kırk yaran"
+  },
+  {
+    "word": "sustainable",
+    "meaning": "sürdürülebilir"
+  },
+  {
+    "word": "consequence",
+    "meaning": "sonuç, netice"
+  },
+  {
+    "word": "distinguish",
+    "meaning": "ayırt etmek, farkı görmek"
+  },
+  {
+    "word": "elaborate",
+    "meaning": "ayrıntılandırmak, detaylı"
+  },
+  {
+    "word": "advocate",
+    "meaning": "savunmak, desteklemek"
+  },
+  {
+    "word": "contradict",
+    "meaning": "çelişmek, aksini söylemek"
+  },
+  {
+    "word": "simultaneous",
+    "meaning": "eşzamanlı, aynı andaki"
+  },
+  {
+    "word": "substantial",
+    "meaning": "kayda değer, önemli miktarda"
+  },
+  {
+    "word": "spontaneous",
+    "meaning": "kendiliğinden olan, doğal"
+  },
+  {
+    "word": "pessimistic",
+    "meaning": "karamsar"
+  },
+  {
+    "word": "optimistic",
+    "meaning": "iyimser"
+  },
+  {
+    "word": "relieve",
+    "meaning": "rahatlatmak, hafifletmek"
+  },
+  {
+    "word": "anticipate",
+    "meaning": "öngörmek, tahmin etmek"
+  },
+  {
+    "word": "evaluate",
+    "meaning": "değerlendirmek"
+  },
+  {
+    "word": "allocate",
+    "meaning": "tahsis etmek, pay etmek"
+  },
+  {
+    "word": "compensate",
+    "meaning": "telafi etmek, bedelini ödemek"
+  },
+  {
+    "word": "enhance",
+    "meaning": "geliştirmek, artırmak"
+  },
+  {
+    "word": "generate",
+    "meaning": "üretmek, oluşturmak"
+  },
+  {
+    "word": "implement",
+    "meaning": "yürürlüğe koymak, uygulamak"
+  },
+  {
+    "word": "negotiate",
+    "meaning": "müzakere etmek, görüşmek"
+  },
+  {
+    "word": "reinforce",
+    "meaning": "güçlendirmek, pekiştirmek"
+  },
+  {
+    "word": "substitute",
+    "meaning": "yerine geçmek, yedek"
+  },
+  {
+    "word": "transform",
+    "meaning": "dönüştürmek, biçimini değiştirmek"
+  },
+  {
+    "word": "undertake",
+    "meaning": "üstlenmek, girişmek"
+  },
+  {
+    "word": "utilize",
+    "meaning": "faydalanmak, istifade etmek"
+  },
+  {
+    "word": "deteriorate",
+    "meaning": "kötüleşmek, bozulmak"
+  },
+  {
+    "word": "diminish",
+    "meaning": "azaltmak, değer kaybetmek"
+  },
+  {
+    "word": "fluctuate",
+    "meaning": "değişkenlik göstermek"
+  },
+  {
+    "word": "perceive",
+    "meaning": "algılamak, farkına varmak"
+  },
+  {
+    "word": "accelerate",
+    "meaning": "hızlanmak, ivme kazanmak"
+  },
+  {
+    "word": "accumulate",
+    "meaning": "birikmek, yığmak"
+  },
+  {
+    "word": "acquire",
+    "meaning": "edinmek, elde etmek"
+  },
+  {
+    "word": "adapt",
+    "meaning": "uyum sağlamak, adapte olmak"
+  },
+  {
+    "word": "clarify",
+    "meaning": "açıklığa kavuşturmak"
+  },
+  {
+    "word": "coincide",
+    "meaning": "denk gelmek, rastlamak"
+  },
+  {
+    "word": "collaborate",
+    "meaning": "birlikte çalışmak, iş birliği yapmak"
+  },
+  {
+    "word": "dominate",
+    "meaning": "hükmetmek, egemen olmak"
+  },
+  {
+    "word": "eliminate",
+    "meaning": "ortadan kaldırmak, elemek"
+  },
+  {
+    "word": "emphasize",
+    "meaning": "vurgulamak, altını çizmek"
+  },
+  {
+    "word": "facilitate",
+    "meaning": "kolaylaştırmak, olanak tanımak"
+  },
+  {
+    "word": "illustrate",
+    "meaning": "örneklemek, resmetmek"
+  },
+  {
+    "word": "integrate",
+    "meaning": "bütünleştirmek, entegre etmek"
+  },
+  {
+    "word": "interpret",
+    "meaning": "yorumlamak, tercüme etmek"
+  },
+  {
+    "word": "isolate",
+    "meaning": "yalıtmak, tecrit etmek"
+  },
+  {
+    "word": "manipulate",
+    "meaning": "yönlendirmek, manipüle etmek"
+  },
+  {
+    "word": "modify",
+    "meaning": "değiştirmek, tadil etmek"
+  },
+  {
+    "word": "monitor",
+    "meaning": "izlemek, takip etmek"
+  },
+  {
+    "word": "neutralize",
+    "meaning": "etkisizleştirmek"
+  },
+  {
+    "word": "overcome",
+    "meaning": "üstesinden gelmek, yenmek"
+  },
+  {
+    "word": "postpone",
+    "meaning": "ertelemek, tehir etmek"
+  },
+  {
+    "word": "predict",
+    "meaning": "öngörmek, tahmin etmek"
+  },
+  {
+    "word": "prohibit",
+    "meaning": "yasaklamak, men etmek"
+  },
+  {
+    "word": "pursue",
+    "meaning": "kovalamak, peşinden gitmek"
+  },
+  {
+    "word": "reconcile",
+    "meaning": "uzlaştırmak, barıştırmak"
+  },
+  {
+    "word": "resolve",
+    "meaning": "çözüme kavuşturmak, kararlaştırmak"
+  },
+  {
+    "word": "restore",
+    "meaning": "eski haline getirmek, onarmak"
+  },
+  {
+    "word": "retain",
+    "meaning": "elde tutmak, muhafaza etmek"
+  },
+  {
+    "word": "reveal",
+    "meaning": "açığa çıkarmak, gözler önüne sermek"
+  },
+  {
+    "word": "stimulate",
+    "meaning": "uyarmak, canlandırmak"
+  },
+  {
+    "word": "suppress",
+    "meaning": "bastırmak, önlemek"
+  },
+  {
+    "word": "tolerate",
+    "meaning": "hoşgörmek, tahammül etmek"
+  },
+  {
+    "word": "trigger",
+    "meaning": "tetiklemek, başlatmak"
+  },
+  {
+    "word": "validate",
+    "meaning": "doğrulamak, geçerli kılmak"
+  },
+  {
+    "word": "verify",
+    "meaning": "teyit etmek, kontrol etmek"
+  },
+  {
+    "word": "withstand",
+    "meaning": "dayanmak, karşı koymak"
+  },
+  {
+    "word": "confront",
+    "meaning": "yüzleşmek, karşı karşıya gelmek"
+  },
+  {
+    "word": "dedicate",
+    "meaning": "adamak, vakfetmek"
+  },
+  {
+    "word": "depict",
+    "meaning": "betimlemek, tasvir etmek"
+  },
+  {
+    "word": "derive",
+    "meaning": "türetmek, köken almak"
+  },
+  {
+    "word": "deviate",
+    "meaning": "sapmak, yoldan çıkmak"
+  },
+  {
+    "word": "differentiate",
+    "meaning": "farklılaştırmak, ayrıştırmak"
+  },
+  {
+    "word": "disrupt",
+    "meaning": "aksatmak, düzenini bozmak"
+  },
+  {
+    "word": "divert",
+    "meaning": "başka yöne çevirmek"
+  },
+  {
+    "word": "execute",
+    "meaning": "icra etmek, yerine getirmek"
+  },
+  {
+    "word": "exhibit",
+    "meaning": "sergilemek, göstermek"
+  },
+  {
+    "word": "impose",
+    "meaning": "dayatmak, zorla kabul ettirmek"
+  },
+  {
+    "word": "induce",
+    "meaning": "neden olmak, tetiklemek"
+  },
+  {
+    "word": "infer",
+    "meaning": "çıkarım yapmak, anlam çıkarmak"
+  },
+  {
+    "word": "inhibit",
+    "meaning": "engellemek, dizginlemek"
+  },
+  {
+    "word": "initiate",
+    "meaning": "başlatmak, öncülük etmek"
+  },
+  {
+    "word": "intervene",
+    "meaning": "müdahale etmek, araya girmek"
+  },
+  {
+    "word": "justify",
+    "meaning": "haklı çıkarmak, gerekçelendirmek"
+  },
+  {
+    "word": "manifest",
+    "meaning": "kendini göstermek, açıkça belirtmek"
+  },
+  {
+    "word": "neglect",
+    "meaning": "ihmal etmek, savsaklamak"
+  },
+  {
+    "word": "prevail",
+    "meaning": "üstün gelmek, hakim olmak"
+  },
+  {
+    "word": "reproduce",
+    "meaning": "çoğaltmak, yeniden üretmek"
+  },
+  {
+    "word": "scrutinize",
+    "meaning": "dikkatle incelemek, didik didik etmek"
+  },
+  {
+    "word": "simulate",
+    "meaning": "taklit etmek, canlandırmak"
+  },
+  {
+    "word": "surpass",
+    "meaning": "aşmak, geride bırakmak"
+  },
+  {
+    "word": "suspend",
+    "meaning": "askıya almak, durdurmak"
+  },
+  {
+    "word": "terminate",
+    "meaning": "sonlandırmak, bitirmek"
+  },
+  {
+    "word": "transcend",
+    "meaning": "ötesine geçmek, aşmak"
+  },
+  {
+    "word": "unify",
+    "meaning": "birleştirmek, tek vücut yapmak"
+  },
+  {
+    "word": "yield",
+    "meaning": "verim sağlamak, teslim olmak"
+  },
+  {
+    "word": "articulate",
+    "meaning": "düşüncelerini açıkça ifade etmek"
+  },
+  {
+    "word": "comprehend",
+    "meaning": "kavramak, tam olarak anlamak"
+  },
+  {
+    "word": "consolidate",
+    "meaning": "pekiştirmek, sağlamlaştırmak"
+  },
+  {
+    "word": "culminate",
+    "meaning": "doruğa ulaşmak, neticelenmek"
+  },
+  {
+    "word": "dismantle",
+    "meaning": "sökmek, parçalara ayırmak"
+  },
+  {
+    "word": "dissuade",
+    "meaning": "vazgeçirmek, caydırmak"
+  },
+  {
+    "word": "illuminate",
+    "meaning": "aydınlatmak, ışık tutmak"
+  },
+  {
+    "word": "jeopardize",
+    "meaning": "tehlikeye atmak, riske sokmak"
+  },
+  {
+    "word": "magnify",
+    "meaning": "büyütmek, abartmak"
+  },
+  {
+    "word": "perpetuate",
+    "meaning": "sürdürmek, devam ettirmek"
+  },
+  {
+    "word": "reiterate",
+    "meaning": "yinelemek, tekrar tekrar söylemek"
+  },
+  {
+    "word": "renovate",
+    "meaning": "yenilemek, restore etmek"
+  },
+  {
+    "word": "substantiate",
+    "meaning": "somut kanıtlarla doğrulamak"
+  },
+  {
+    "word": "abundant",
+    "meaning": "bol, bereketli"
+  },
+  {
+    "word": "accommodate",
+    "meaning": "yer sağlamak, uyum sağlamak"
+  },
+  {
+    "word": "acknowledge",
+    "meaning": "kabullenmek, doğrulamak"
+  },
+  {
+    "word": "adverse",
+    "meaning": "olumsuz, elverişsiz"
+  },
+  {
+    "word": "aesthetic",
+    "meaning": "estetik, göze hoş gelen"
+  },
+  {
+    "word": "aggregate",
+    "meaning": "toplam, küme"
+  },
+  {
+    "word": "align",
+    "meaning": "hizalamak, aynı çizgiye gelmek"
+  },
+  {
+    "word": "alleviate",
+    "meaning": "hafifletmek, dindirmek"
+  },
+  {
+    "word": "allocation",
+    "meaning": "ödenek, tahsisat"
+  },
+  {
+    "word": "alter",
+    "meaning": "başkalaştırmak, değiştirmek"
+  },
+  {
+    "word": "analogy",
+    "meaning": "benzeşim, analoji"
+  },
+  {
+    "word": "anomaly",
+    "meaning": "sapma, kural dışılık"
+  },
+  {
+    "word": "apparatus",
+    "meaning": "cihaz, aygıt"
+  },
+  {
+    "word": "arbitrary",
+    "meaning": "keyfi, rastgele"
+  },
+  {
+    "word": "assert",
+    "meaning": "ileri sürmek, iddia etmek"
+  },
+  {
+    "word": "attain",
+    "meaning": "elde etmek, erişmek"
+  },
+  {
+    "word": "attribute",
+    "meaning": "özellik, dayandırmak"
+  },
+  {
+    "word": "authentic",
+    "meaning": "özgün, sahici"
+  },
+  {
+    "word": "autonomous",
+    "meaning": "özerk, kendi kendini yöneten"
+  },
+  {
+    "word": "benchmark",
+    "meaning": "kıyaslama ölçütü"
+  },
+  {
+    "word": "bias",
+    "meaning": "önyargı, taraflılık"
+  },
+  {
+    "word": "catastrophe",
+    "meaning": "büyük felaket, yıkım"
+  },
+  {
+    "word": "chronological",
+    "meaning": "zaman sırasına göre"
+  },
+  {
+    "word": "cite",
+    "meaning": "alıntı yapmak, kaynak göstermek"
+  },
+  {
+    "word": "clandestine",
+    "meaning": "gizli, el altından yapılan"
+  },
+  {
+    "word": "clause",
+    "meaning": "madde, cümlecik"
+  },
+  {
+    "word": "cluster",
+    "meaning": "küme, öbek"
+  },
+  {
+    "word": "cohesive",
+    "meaning": "bağlantılı, kaynaşık"
+  },
+  {
+    "word": "commodity",
+    "meaning": "ticari mal, emtia"
+  },
+  {
+    "word": "compatible",
+    "meaning": "uyumlu, bağdaşan"
+  },
+  {
+    "word": "compile",
+    "meaning": "derlemek, bir araya getirmek"
+  },
+  {
+    "word": "concede",
+    "meaning": "kabullenmek, ödün vermek"
+  },
+  {
+    "word": "conceive",
+    "meaning": "tasarlamak, zihinde canlandırmak"
+  },
+  {
+    "word": "concurrent",
+    "meaning": "aynı anda gerçekleşen"
+  },
+  {
+    "word": "conform",
+    "meaning": "uymak, boyun eğmek"
+  },
+  {
+    "word": "consensus",
+    "meaning": "uzlaşı, fikir birliği"
+  },
+  {
+    "word": "consent",
+    "meaning": "rıza, muvafakat"
+  },
+  {
+    "word": "constitute",
+    "meaning": "oluşturmak, teşkil etmek"
+  },
+  {
+    "word": "constrain",
+    "meaning": "kısıtlamak, zorlamak"
+  },
+  {
+    "word": "contemplate",
+    "meaning": "uzun uzun düşünmek"
+  },
+  {
+    "word": "contend",
+    "meaning": "mücadele etmek, savunmak"
+  },
+  {
+    "word": "contingent",
+    "meaning": "bağlı, şarta bağlı"
+  },
+  {
+    "word": "contradictory",
+    "meaning": "çelişkili, tezat"
+  },
+  {
+    "word": "convene",
+    "meaning": "toplanmak, bir araya gelmek"
+  },
+  {
+    "word": "converge",
+    "meaning": "aynı noktada buluşmak"
+  },
+  {
+    "word": "converse",
+    "meaning": "karşıt, zıt"
+  },
+  {
+    "word": "counterpart",
+    "meaning": "emsal, muadil"
+  },
+  {
+    "word": "criterion",
+    "meaning": "kriter, ölçüt"
+  },
+  {
+    "word": "crucial",
+    "meaning": "son derece önemli, hayati"
+  },
+  {
+    "word": "cumbersome",
+    "meaning": "hantal, zahmetli"
+  },
+  {
+    "word": "curb",
+    "meaning": "frenlemek, zapt etmek"
+  },
+  {
+    "word": "decay",
+    "meaning": "çürümek, bozulmak"
+  },
+  {
+    "word": "deficit",
+    "meaning": "açık, eksiklik"
+  },
+  {
+    "word": "definitive",
+    "meaning": "kesin, nihai"
+  },
+  {
+    "word": "demolish",
+    "meaning": "yıkmak, tahrip etmek"
+  },
+  {
+    "word": "denounce",
+    "meaning": "kınamak, ihbar etmek"
+  },
+  {
+    "word": "deploy",
+    "meaning": "konuşlandırmak, yaymak"
+  },
+  {
+    "word": "designate",
+    "meaning": "belirlemek, atamak"
+  },
+  {
+    "word": "desolate",
+    "meaning": "ıssız, terk edilmiş"
+  },
+  {
+    "word": "despair",
+    "meaning": "çaresizlik, umutsuzluk"
+  },
+  {
+    "word": "deviant",
+    "meaning": "sapmış, kurallara uymayan"
+  },
+  {
+    "word": "devise",
+    "meaning": "planlamak, icat etmek"
+  },
+  {
+    "word": "dilemma",
+    "meaning": "ikilem, çıkmaz"
+  },
+  {
+    "word": "dimension",
+    "meaning": "boyut, ölçü"
+  },
+  {
+    "word": "discrete",
+    "meaning": "ayrık, birbirinden bağımsız"
+  },
+  {
+    "word": "disperse",
+    "meaning": "dağılmak, saçılmak"
+  },
+  {
+    "word": "dispute",
+    "meaning": "anlaşmazlık, uyuşmazlık"
+  },
+  {
+    "word": "disregard",
+    "meaning": "göz ardı etmek, yok saymak"
+  },
+  {
+    "word": "disruptive",
+    "meaning": "düzen bozucu, yıkıcı"
+  },
+  {
+    "word": "distort",
+    "meaning": "çarpıtmak, tahrif etmek"
+  },
+  {
+    "word": "divergent",
+    "meaning": "farklılaşan, ayrı yönlere giden"
+  },
+  {
+    "word": "diverse",
+    "meaning": "çeşitli, muhtelif"
+  },
+  {
+    "word": "dormant",
+    "meaning": "uykuda olan, hareketsiz"
+  },
+  {
+    "word": "drastic",
+    "meaning": "sert, köklü, radikal"
+  },
+  {
+    "word": "elusive",
+    "meaning": "yakalanması zor, ele avuca sığmaz"
+  },
+  {
+    "word": "embark",
+    "meaning": "girişmek, yolculuğa başlamak"
+  },
+  {
+    "word": "emerge",
+    "meaning": "ortaya çıkmak, belirmek"
+  },
+  {
+    "word": "empathy",
+    "meaning": "duygudaşlık, empati"
+  },
+  {
+    "word": "endorse",
+    "meaning": "onaylamak, arka çıkmak"
+  },
+  {
+    "word": "enforce",
+    "meaning": "uygulatmak, yürütmek"
+  },
+  {
+    "word": "enormous",
+    "meaning": "muazzam, devasa"
+  },
+  {
+    "word": "entity",
+    "meaning": "varlık, mevcudiyet"
+  },
+  {
+    "word": "equate",
+    "meaning": "eşit saymak, denk tutmak"
+  },
+  {
+    "word": "erode",
+    "meaning": "aşındırmak, yıpratmak"
+  },
+  {
+    "word": "escalate",
+    "meaning": "tırmanmak, kızışmak"
+  },
+  {
+    "word": "establish",
+    "meaning": "kurmak, tesis etmek"
+  },
+  {
+    "word": "evaporate",
+    "meaning": "buharlaşmak, yok olmak"
+  },
+  {
+    "word": "evident",
+    "meaning": "aşikar, apaçık"
+  },
+  {
+    "word": "evolve",
+    "meaning": "evrilmek, gelişmek"
+  },
+  {
+    "word": "exceed",
+    "meaning": "aşmak, haddini aşmak"
+  },
+  {
+    "word": "exclude",
+    "meaning": "hariç tutmak, dışlamak"
+  },
+  {
+    "word": "exempt",
+    "meaning": "muaf, bağışık"
+  },
+  {
+    "word": "exert",
+    "meaning": "sarf etmek, güç kullanmak"
+  },
+  {
+    "word": "exhaust",
+    "meaning": "tüketmek, yormak"
+  },
+  {
+    "word": "explicit",
+    "meaning": "açık, net, belirgin"
+  },
+  {
+    "word": "exploit",
+    "meaning": "sömürmek, sonuna kadar yararlanmak"
+  },
+  {
+    "word": "expose",
+    "meaning": "maruz bırakmak, ifşa etmek"
+  },
+  {
+    "word": "extract",
+    "meaning": "özünü çıkarmak, çekmek"
+  },
+  {
+    "word": "facet",
+    "meaning": "yön, cephe, boyut"
+  },
+  {
+    "word": "flaw",
+    "meaning": "kusur, çatlak, hata"
+  },
+  {
+    "word": "foster",
+    "meaning": "teşvik etmek, besleyip büyütmek"
+  },
+  {
+    "word": "fraction",
+    "meaning": "kesir, ufak parça"
+  },
+  {
+    "word": "framework",
+    "meaning": "ana hatlar, temel yapı"
+  },
+  {
+    "word": "friction",
+    "meaning": "sürtünme, gerginlik"
+  },
+  {
+    "word": "fundamental",
+    "meaning": "esas, can alıcı, köklü"
+  },
+  {
+    "word": "furthermore",
+    "meaning": "üstelik, dahası"
+  },
+  {
+    "word": "futile",
+    "meaning": "nafile, boşuna, beyhude"
+  },
+  {
+    "word": "glean",
+    "meaning": "azar azar toplamak, derlemek"
+  },
+  {
+    "word": "glimpse",
+    "meaning": "kısa bakış, anlık görüş"
+  },
+  {
+    "word": "graceful",
+    "meaning": "zarif, incelikli"
+  },
+  {
+    "word": "gradual",
+    "meaning": "kademeli, yavaş yavaş olan"
+  },
+  {
+    "word": "grant",
+    "meaning": "bağışlamak, hibe etmek"
+  },
+  {
+    "word": "gravity",
+    "meaning": "yerçekimi / ciddiyet"
+  },
+  {
+    "word": "grim",
+    "meaning": "kasvetli, acımasız"
+  },
+  {
+    "word": "halt",
+    "meaning": "durdurmak, duraksamak"
+  },
+  {
+    "word": "hamper",
+    "meaning": "engellemek, aksatmak"
+  },
+  {
+    "word": "harness",
+    "meaning": "dizginlemek, kontrol edip kullanmak"
+  },
+  {
+    "word": "harsh",
+    "meaning": "sert, kırıcı, haşin"
+  },
+  {
+    "word": "hasty",
+    "meaning": "aceleci, telaşlı"
+  },
+  {
+    "word": "hierarchy",
+    "meaning": "aşama sırası, hiyerarşi"
+  },
+  {
+    "word": "hinder",
+    "meaning": "mani olmak, kösteklemek"
+  },
+  {
+    "word": "hostile",
+    "meaning": "düşmanca, hasmane"
+  },
+  {
+    "word": "hypothetical",
+    "meaning": "varsayımsal, farazi"
+  },
+  {
+    "word": "ignite",
+    "meaning": "ateşlemek, tutuşturmak"
+  },
+  {
+    "word": "immense",
+    "meaning": "uçsuz bucaksız, muazzam"
+  },
+  {
+    "word": "imminent",
+    "meaning": "eli kulağında, pek yakın"
+  },
+  {
+    "word": "immune",
+    "meaning": "bağışık, etkilenmez"
+  },
+  {
+    "word": "impactful",
+    "meaning": "etkili, tesirli"
+  },
+  {
+    "word": "impart",
+    "meaning": "kazandırmak, aktarmak"
+  },
+  {
+    "word": "impartial",
+    "meaning": "tarafsız, yansız"
+  },
+  {
+    "word": "impede",
+    "meaning": "ayak bağı olmak, yavaşlatmak"
+  },
+  {
+    "word": "imperative",
+    "meaning": "zorunlu, elzem"
+  },
+  {
+    "word": "implicit",
+    "meaning": "üstü kapalı, imalı"
+  },
+  {
+    "word": "implore",
+    "meaning": "yalvarmak, yakarmak"
+  },
+  {
+    "word": "impoverish",
+    "meaning": "yoksullaştırmak"
+  },
+  {
+    "word": "incline",
+    "meaning": "meyletmek, eğim"
+  },
+  {
+    "word": "incorporate",
+    "meaning": "bünyesine katmak, birleştirmek"
+  },
+  {
+    "word": "indigenous",
+    "meaning": "yerli, o yöreye özgü"
+  },
+  {
+    "word": "indulge",
+    "meaning": "şımartmak, zevkine varmak"
+  },
+  {
+    "word": "inept",
+    "meaning": "beceriksiz, yersiz"
+  },
+  {
+    "word": "infamous",
+    "meaning": "kötü şöhretli, adı çıkmış"
+  },
+  {
+    "word": "inflict",
+    "meaning": "uğratmak, yaşatmak"
+  },
+  {
+    "word": "inherent",
+    "meaning": "doğuştan gelen, özünde olan"
+  },
+  {
+    "word": "innovate",
+    "meaning": "yenilik getirmek"
+  },
+  {
+    "word": "inquire",
+    "meaning": "sorup soruşturmak"
+  },
+  {
+    "word": "insight",
+    "meaning": "içgörü, derin anlayış"
+  },
+  {
+    "word": "inspect",
+    "meaning": "denetlemek, teftiş etmek"
+  },
+  {
+    "word": "inspire",
+    "meaning": "ilham vermek"
+  },
+  {
+    "word": "intact",
+    "meaning": "bozulmamış, sapasağlam"
+  },
+  {
+    "word": "integral",
+    "meaning": "ayrılmaz, tamamlayıcı"
+  },
+  {
+    "word": "intense",
+    "meaning": "yoğun, şiddetli"
+  },
+  {
+    "word": "interact",
+    "meaning": "etkileşimde bulunmak"
+  },
+  {
+    "word": "interim",
+    "meaning": "geçici, ara dönem"
+  },
+  {
+    "word": "intricate",
+    "meaning": "karmaşık, girift"
+  },
+  {
+    "word": "intrinsic",
+    "meaning": "asıl, içkin, yapısında olan"
+  },
+  {
+    "word": "intrude",
+    "meaning": "davetsiz girmek, tecavüz etmek"
+  },
+  {
+    "word": "invaluable",
+    "meaning": "paha biçilemez, çok kıymetli"
+  },
+  {
+    "word": "invoke",
+    "meaning": "çağırmak, yardımına başvurmak"
+  },
+  {
+    "word": "irreversible",
+    "meaning": "geri döndürülemez"
+  },
+  {
+    "word": "irrigate",
+    "meaning": "sulamak, su taşımak"
+  },
+  {
+    "word": "iterate",
+    "meaning": "yinelemek, adım adım işlemek"
+  },
+  {
+    "word": "jealous",
+    "meaning": "kıskanç, haset"
+  },
+  {
+    "word": "judicious",
+    "meaning": "sağduyulu, akıllıca"
+  },
+  {
+    "word": "junction",
+    "meaning": "kavşak, birleşme noktası"
+  },
+  {
+    "word": "juvenile",
+    "meaning": "gençlik dönemine ait"
+  },
+  {
+    "word": "keen",
+    "meaning": "hevesli, keskin"
+  },
+  {
+    "word": "kinetic",
+    "meaning": "hareketli, kinetik"
+  },
+  {
+    "word": "knack",
+    "meaning": "hüner, ustalık"
+  },
+  {
+    "word": "knot",
+    "meaning": "düğüm, düğümlemek"
+  },
+  {
+    "word": "laborious",
+    "meaning": "zahmetli, külfetli"
+  },
+  {
+    "word": "lapse",
+    "meaning": "zaman aşımı, gaflet"
+  },
+  {
+    "word": "lateral",
+    "meaning": "yan, yanal"
+  },
+  {
+    "word": "lavish",
+    "meaning": "savurgan, gösterişli"
+  },
+  {
+    "word": "legacy",
+    "meaning": "miras, kalıt"
+  },
+  {
+    "word": "legitimate",
+    "meaning": "meşru, yasal, haklı"
+  },
+  {
+    "word": "lenient",
+    "meaning": "hoşgörülü, müsamahakar"
+  },
+  {
+    "word": "lethal",
+    "meaning": "ölümcül, can alıcı"
+  },
+  {
+    "word": "leverage",
+    "meaning": "kaldıraç gücü, avantaj"
+  },
+  {
+    "word": "liable",
+    "meaning": "sorumlu, yükümlü"
+  },
+  {
+    "word": "linger",
+    "meaning": "oyalanmak, ayrılamamak"
+  },
+  {
+    "word": "literal",
+    "meaning": "kelimesi kelimesine, harfi harfine"
+  },
+  {
+    "word": "lofty",
+    "meaning": "yüce, ulu, yüksek"
+  },
+  {
+    "word": "lucrative",
+    "meaning": "karlı, kazançlı"
+  },
+  {
+    "word": "luminous",
+    "meaning": "parlak, ışık saçan"
+  },
+  {
+    "word": "magnitude",
+    "meaning": "büyüklük, azamet"
+  },
+  {
+    "word": "mandatory",
+    "meaning": "mecburi, zorunlu"
+  },
+  {
+    "word": "manifesto",
+    "meaning": "bildiri, manifesto"
+  },
+  {
+    "word": "marginal",
+    "meaning": "sınırda kalan, önemsiz"
+  },
+  {
+    "word": "marvel",
+    "meaning": "hayret etmek, mucize"
+  },
+  {
+    "word": "mastery",
+    "meaning": "ustalık, hakimiyet"
+  },
+  {
+    "word": "mediocre",
+    "meaning": "sıradan, vasat"
+  },
+  {
+    "word": "merge",
+    "meaning": "birleşmek, kaynaşmak"
+  },
+  {
+    "word": "mimic",
+    "meaning": "taklit etmek"
+  },
+  {
+    "word": "minimize",
+    "meaning": "en aza indirmek"
+  },
+  {
+    "word": "minuscule",
+    "meaning": "minicik, çok küçük"
+  },
+  {
+    "word": "misleading",
+    "meaning": "yanıltıcı, aldatıcı"
+  },
+  {
+    "word": "modest",
+    "meaning": "mütevazı, alçakgönüllü"
+  },
+  {
+    "word": "monumental",
+    "meaning": "anıtsal, abidevi"
+  },
+  {
+    "word": "motivate",
+    "meaning": "güdülemek, şevklendirmek"
+  },
+  {
+    "word": "multitude",
+    "meaning": "büyük kalabalık, çokluk"
+  },
+  {
+    "word": "naive",
+    "meaning": "saf, deneyimsiz"
+  },
+  {
+    "word": "narrate",
+    "meaning": "anlatmak, hikaye etmek"
+  },
+  {
+    "word": "negate",
+    "meaning": "yok saymak, inkar etmek"
+  },
+  {
+    "word": "negligible",
+    "meaning": "önemsenmeyecek kadar az"
+  },
+  {
+    "word": "nimble",
+    "meaning": "çevik, atak"
+  },
+  {
+    "word": "nominal",
+    "meaning": "sembolik, kağıt üstünde"
+  },
+  {
+    "word": "notable",
+    "meaning": "dikkate değer, göze çarpan"
+  },
+  {
+    "word": "novelty",
+    "meaning": "orijinallik, yenilik"
+  },
+  {
+    "word": "nurture",
+    "meaning": "besleyip geliştirmek, büyütmek"
+  },
+  {
+    "word": "obedient",
+    "meaning": "itaatkar, söz dinleyen"
+  },
+  {
+    "word": "objective",
+    "meaning": "nesnel, amaç"
+  },
+  {
+    "word": "obligate",
+    "meaning": "yükümlü kılmak, mecbur etmek"
+  },
+  {
+    "word": "oblivious",
+    "meaning": "habersiz, farkında olmayan"
+  },
+  {
+    "word": "obscure",
+    "meaning": "belirsiz, anlaşılması güç"
+  },
+  {
+    "word": "obsolete",
+    "meaning": "kullanımdan kalkmış, modası geçmiş"
+  },
+  {
+    "word": "obstacle",
+    "meaning": "engel, bariyer"
+  },
+  {
+    "word": "omnipresent",
+    "meaning": "her yerde bulunan"
+  },
+  {
+    "word": "onerous",
+    "meaning": "ağır, külfetli"
+  },
+  {
+    "word": "ongoing",
+    "meaning": "süren, devam eden"
+  },
+  {
+    "word": "opaque",
+    "meaning": "mat, ışık geçirmez"
+  },
+  {
+    "word": "oppress",
+    "meaning": "baskı yapmak, ezmek"
+  },
+  {
+    "word": "optimum",
+    "meaning": "en uygun, ideal"
+  },
+  {
+    "word": "orchestrate",
+    "meaning": "düzenlemek, ustaca organize etmek"
+  },
+  {
+    "word": "orient",
+    "meaning": "yöneltmek, uyumlandırmak"
+  },
+  {
+    "word": "originate",
+    "meaning": "ortaya çıkmak, başlamak"
+  },
+  {
+    "word": "orthodox",
+    "meaning": "gelenekçi, alışılagelmiş"
+  },
+  {
+    "word": "oscillate",
+    "meaning": "salınmak, gidip gelmek"
+  },
+  {
+    "word": "outrageous",
+    "meaning": "akıl almaz, rezilce"
+  },
+  {
+    "word": "overhaul",
+    "meaning": "baştan aşağı yenilemek"
+  },
+  {
+    "word": "oversee",
+    "meaning": "gözetmek, denetlemek"
+  },
+  {
+    "word": "overwhelm",
+    "meaning": "baskın gelmek, bunaltmak"
+  },
+  {
+    "word": "pacify",
+    "meaning": "yatıştırmak, sakinleştirmek"
+  },
+  {
+    "word": "painstaking",
+    "meaning": "büyük özen isteyen, titiz"
+  },
+  {
+    "word": "paramount",
+    "meaning": "en üstün, en mühim"
+  },
+  {
+    "word": "partisan",
+    "meaning": "tarafgir, partizan"
+  },
+  {
+    "word": "passion",
+    "meaning": "tutku, coşku"
+  },
+  {
+    "word": "pathway",
+    "meaning": "yol, güzergah"
+  },
+  {
+    "word": "patronize",
+    "meaning": "küçümser tavır takınmak"
+  },
+  {
+    "word": "peculiar",
+    "meaning": "garip, kendine has"
+  },
+  {
+    "word": "perceptive",
+    "meaning": "sezgisi kuvvetli, anlayışlı"
+  },
+  {
+    "word": "perilous",
+    "meaning": "tehlikelerle dolu"
+  },
+  {
+    "word": "perish",
+    "meaning": "yok olmak, can vermek"
+  },
+  {
+    "word": "permeate",
+    "meaning": "içine işlemek, nüfuz etmek"
+  },
+  {
+    "word": "perplex",
+    "meaning": "kafasını karıştırmak"
+  },
+  {
+    "word": "persevere",
+    "meaning": "direnmek, azimle sürdürmek"
+  },
+  {
+    "word": "persuasive",
+    "meaning": "ikna edici, inandırıcı"
+  },
+  {
+    "word": "pivotal",
+    "meaning": "kilit noktada olan, merkezi"
+  },
+  {
+    "word": "placate",
+    "meaning": "gönlünü almak, yatıştırmak"
+  },
+  {
+    "word": "plausible",
+    "meaning": "akla yatkın, makul"
+  },
+  {
+    "word": "plead",
+    "meaning": "yalvarmak, savunma yapmak"
+  },
+  {
+    "word": "poised",
+    "meaning": "kendinden emin, dengeli"
+  },
+  {
+    "word": "ponder",
+    "meaning": "enine boyuna düşünmek"
+  },
+  {
+    "word": "portable",
+    "meaning": "taşınabilir, seyyar"
+  },
+  {
+    "word": "portray",
+    "meaning": "resmetmek, canlandırmak"
+  },
+  {
+    "word": "potent",
+    "meaning": "etkili, nüfuzlu, güçlü"
+  },
+  {
+    "word": "precaution",
+    "meaning": "önlem, tedbir"
+  },
+  {
+    "word": "precede",
+    "meaning": "öncesinde gelmek, önce olmak"
+  },
+  {
+    "word": "precedent",
+    "meaning": "emsal, geçmişteki örnek"
+  },
+  {
+    "word": "preclude",
+    "meaning": "önüne geçmek, engel olmak"
+  },
+  {
+    "word": "predicament",
+    "meaning": "müşkül durum, sıkıntı"
+  },
+  {
+    "word": "premature",
+    "meaning": "vaktinden önce, erken"
+  },
+  {
+    "word": "premise",
+    "meaning": "öncül, temel varsayım"
+  },
+  {
+    "word": "prescribe",
+    "meaning": "reçete yazmak, buyurmak"
+  },
+  {
+    "word": "prestige",
+    "meaning": "saygınlık, itibar"
+  },
+  {
+    "word": "presume",
+    "meaning": "varsaymak, tahmin etmek"
+  },
+  {
+    "word": "primitive",
+    "meaning": "ilkel, ilk çağa ait"
+  },
+  {
+    "word": "pristine",
+    "meaning": "bozulmamış, tertemiz"
+  },
+  {
+    "word": "privilege",
+    "meaning": "ayrıcalık, imtiyaz"
+  },
+  {
+    "word": "probe",
+    "meaning": "derinlemesine araştırmak"
+  },
+  {
+    "word": "proclaim",
+    "meaning": "ilan etmek, duyurmak"
+  },
+  {
+    "word": "proficient",
+    "meaning": "yetkin, uzmanlaşmış"
+  },
+  {
+    "word": "prolong",
+    "meaning": "uzatmak, süresini artırmak"
+  },
+  {
+    "word": "prominent",
+    "meaning": "öne çıkan, seçkin"
+  },
+  {
+    "word": "prompt",
+    "meaning": "vakit kaybetmeden, teşvik etmek"
+  },
+  {
+    "word": "proponent",
+    "meaning": "taraftar, savunan kimse"
+  },
+  {
+    "word": "prospective",
+    "meaning": "olası, muhtemel"
+  },
+  {
+    "word": "prosper",
+    "meaning": "zenginleşmek, refaha kavuşmak"
+  },
+  {
+    "word": "protocol",
+    "meaning": "protokol, resmi düzen"
+  },
+  {
+    "word": "provoke",
+    "meaning": "kışkırtmak, tahrik etmek"
+  },
+  {
+    "word": "prudent",
+    "meaning": "tedbirli, basiretli"
+  },
+  {
+    "word": "punctual",
+    "meaning": "dakik, saatine sadık"
+  },
+  {
+    "word": "quaint",
+    "meaning": "hoş ve eski tarz, orijinal"
+  },
+  {
+    "word": "qualitative",
+    "meaning": "niteliksel, kalitatif"
+  },
+  {
+    "word": "quantitative",
+    "meaning": "niceliksel, sayısal"
+  },
+  {
+    "word": "quench",
+    "meaning": "söndürmek, susuzluğu gidermek"
+  },
+  {
+    "word": "query",
+    "meaning": "sorgu, sual"
+  },
+  {
+    "word": "quest",
+    "meaning": "arama, arayış"
+  },
+  {
+    "word": "radiant",
+    "meaning": "ışıl ışıl, parıldayan"
+  },
+  {
+    "word": "ramble",
+    "meaning": "boş boş dolaşmak, lafı uzatmak"
+  },
+  {
+    "word": "ramification",
+    "meaning": "dal budak salma, yan etki"
+  },
+  {
+    "word": "randomize",
+    "meaning": "rastgele sıralamak"
+  },
+  {
+    "word": "ratify",
+    "meaning": "onaylamak, tasdik etmek"
+  },
+  {
+    "word": "ration",
+    "meaning": "tayın, istihkak"
+  },
+  {
+    "word": "rationalize",
+    "meaning": "mantığa büründürmek"
+  },
+  {
+    "word": "ravage",
+    "meaning": "talan etmek, kasıp kavurmak"
+  },
+  {
+    "word": "rebut",
+    "meaning": "aksini kanıtlamak, çürütmek"
+  },
+  {
+    "word": "recede",
+    "meaning": "geri çekilmek, uzaklaşmak"
+  },
+  {
+    "word": "recipient",
+    "meaning": "alıcı, teslim alan"
+  },
+  {
+    "word": "reckless",
+    "meaning": "pervasız, umursamaz"
+  },
+  {
+    "word": "reckon",
+    "meaning": "hesap etmek, sanmak"
+  },
+  {
+    "word": "reclaim",
+    "meaning": "geri istemek, geri kazanmak"
+  },
+  {
+    "word": "recur",
+    "meaning": "nüksetmek, yeniden olmak"
+  },
+  {
+    "word": "redundant",
+    "meaning": "fazlalık, gereksiz"
+  },
+  {
+    "word": "refine",
+    "meaning": "arıtmak, inceltmek"
+  },
+  {
+    "word": "refrain",
+    "meaning": "kaçınmak, kendini tutmak"
+  },
+  {
+    "word": "refute",
+    "meaning": "yalanlamak, çürütmek"
+  },
+  {
+    "word": "reign",
+    "meaning": "hüküm sürmek, egemenlik"
+  },
+  {
+    "word": "reimburse",
+    "meaning": "masrafı karşılamak, tazmin etmek"
+  },
+  {
+    "word": "relapse",
+    "meaning": "kötüleşmek, nüksetme"
+  },
+  {
+    "word": "relegate",
+    "meaning": "daha alt dereceye indirmek"
+  },
+  {
+    "word": "relentless",
+    "meaning": "amansız, hız kesmeyen"
+  },
+  {
+    "word": "relevant",
+    "meaning": "konuyla ilgili, amaca uygun"
+  },
+  {
+    "word": "relinquish",
+    "meaning": "vazgeçmek, el çekmek"
+  },
+  {
+    "word": "remedy",
+    "meaning": "çare, deva"
+  },
+  {
+    "word": "remnant",
+    "meaning": "kalıntı, bakiye"
+  },
+  {
+    "word": "renounce",
+    "meaning": "resmen vazgeçtiğini bildirmek"
+  },
+  {
+    "word": "repeal",
+    "meaning": "yürürlükten kaldırmak, feshetmek"
+  },
+  {
+    "word": "repel",
+    "meaning": "geri püskürtmek, itmek"
+  },
+  {
+    "word": "repress",
+    "meaning": "duyguyu bastırmak, sindirmek"
+  },
+  {
+    "word": "reprimand",
+    "meaning": "azarlamak, paylamak"
+  },
+  {
+    "word": "repudiate",
+    "meaning": "reddetmek, tanımamak"
+  },
+  {
+    "word": "rescind",
+    "meaning": "feshetmek, hükümsüz kılmak"
+  },
+  {
+    "word": "resent",
+    "meaning": "içerlemek, gücenmek"
+  },
+  {
+    "word": "reservoir",
+    "meaning": "rezervuar, hazne, birikim"
+  },
+  {
+    "word": "resolute",
+    "meaning": "kararlı, azimli"
+  },
+  {
+    "word": "resonance",
+    "meaning": "yankı, titreşim uyumu"
+  },
+  {
+    "word": "respite",
+    "meaning": "mola, nefes alma payı"
+  },
+  {
+    "word": "restrain",
+    "meaning": "zapt etmek, frenlemek"
+  },
+  {
+    "word": "restrictive",
+    "meaning": "kısıtlayıcı, daraltıcı"
+  },
+  {
+    "word": "retaliate",
+    "meaning": "misilleme yapmak, karşılık vermek"
+  },
+  {
+    "word": "retrieve",
+    "meaning": "gidip geri getirmek, bulup çıkarmak"
+  },
+  {
+    "word": "retrospect",
+    "meaning": "geçmişe dönüp bakış"
+  },
+  {
+    "word": "revere",
+    "meaning": "büyük saygı göstermek, yüceltmek"
+  },
+  {
+    "word": "revert",
+    "meaning": "eski haline dönmek"
+  },
+  {
+    "word": "revoke",
+    "meaning": "iptal etmek, geri almak"
+  },
+  {
+    "word": "rhetoric",
+    "meaning": "hitabet sanatı, retorik"
+  },
+  {
+    "word": "rigorous",
+    "meaning": "sıkı, titiz, ödünsüz"
+  },
+  {
+    "word": "robust",
+    "meaning": "sağlam, güçlü, dinamik"
+  },
+  {
+    "word": "rotate",
+    "meaning": "döndürmek, sırayla yapmak"
+  },
+  {
+    "word": "routine",
+    "meaning": "alışılmış işler, mutat"
+  },
+  {
+    "word": "rudimentary",
+    "meaning": "temel düzeyde, gelişmemiş"
+  },
+  {
+    "word": "rupture",
+    "meaning": "kopma, yırtılma"
+  },
+  {
+    "word": "salient",
+    "meaning": "en belirgin, göze çarpan"
+  },
+  {
+    "word": "sanction",
+    "meaning": "yaptırım, onaylamak"
+  },
+  {
+    "word": "saturate",
+    "meaning": "doyurmak, emdirmek"
+  },
+  {
+    "word": "scanty",
+    "meaning": "kıt, yetersiz"
+  },
+  {
+    "word": "scatter",
+    "meaning": "saçılmak, dağıtmak"
+  },
+  {
+    "word": "sceptical",
+    "meaning": "şüpheci, kuşkucu"
+  },
+  {
+    "word": "scope",
+    "meaning": "kapsam, etki alanı"
+  },
+  {
+    "word": "segment",
+    "meaning": "bölüm, parça"
+  },
+  {
+    "word": "serene",
+    "meaning": "dingin, huzurlu"
+  },
+  {
+    "word": "sever",
+    "meaning": "koparmak, kesip ayırmak"
+  },
+  {
+    "word": "shrewd",
+    "meaning": "kurnaz, açıkgöz, sezgili"
+  },
+  {
+    "word": "skepticism",
+    "meaning": "şüphecilik, kuşkuculuk"
+  },
+  {
+    "word": "sluggish",
+    "meaning": "ağır kanlı, uyuşuk"
+  },
+  {
+    "word": "solemn",
+    "meaning": "ciddi, ağırbaşlı"
+  },
+  {
+    "word": "solitary",
+    "meaning": "tek başına, yalnız"
+  },
+  {
+    "word": "sovereign",
+    "meaning": "egemen, bağımsız"
+  },
+  {
+    "word": "sparse",
+    "meaning": "seyrek, dağınık"
+  },
+  {
+    "word": "speculate",
+    "meaning": "tahminde bulunmak, spekülasyon"
+  },
+  {
+    "word": "sporadic",
+    "meaning": "ara sıra olan, tek tük"
+  },
+  {
+    "word": "stagnant",
+    "meaning": "durgun, akmayan"
+  },
+  {
+    "word": "steadfast",
+    "meaning": "sarsılmaz, kararlı"
+  },
+  {
+    "word": "stem",
+    "meaning": "kök, den kaynaklanmak"
+  },
+  {
+    "word": "stipulate",
+    "meaning": "şart koşmak"
+  },
+  {
+    "word": "stringent",
+    "meaning": "katı, sıkı, tavizsiz"
+  },
+  {
+    "word": "strive",
+    "meaning": "çabalamak, gayret sarf etmek"
+  },
+  {
+    "word": "subdue",
+    "meaning": "bastırmak, boyun eğdirmek"
+  },
+  {
+    "word": "sublime",
+    "meaning": "yüce, hayranlık uyandırıcı"
+  },
+  {
+    "word": "subsequent",
+    "meaning": "ardından gelen, sonraki"
+  },
+  {
+    "word": "subsidy",
+    "meaning": "devlet desteği, sübvansiyon"
+  },
+  {
+    "word": "succinct",
+    "meaning": "kısa ve öz, veciz"
+  },
+  {
+    "word": "succumb",
+    "meaning": "yenik düşmek, boyun eğmek"
+  },
+  {
+    "word": "suffice",
+    "meaning": "yeterli olmak, kafi gelmek"
+  },
+  {
+    "word": "superficial",
+    "meaning": "yüzeysel, derinliği olmayan"
+  },
+  {
+    "word": "superfluous",
+    "meaning": "lüzumsuz, gereğinden fazla"
+  },
+  {
+    "word": "supersede",
+    "meaning": "yerini almak, tahtından etmek"
+  },
+  {
+    "word": "supplement",
+    "meaning": "ekleme yapmak, takviye"
+  },
+  {
+    "word": "surplus",
+    "meaning": "fazlalık, arz fazlası"
+  },
+  {
+    "word": "susceptible",
+    "meaning": "duyarlı, kolay etkilenen"
+  },
+  {
+    "word": "sustain",
+    "meaning": "ayakta tutmak, devam ettirmek"
+  },
+  {
+    "word": "swift",
+    "meaning": "çabuk, tez, hızlı"
+  },
+  {
+    "word": "symbiosis",
+    "meaning": "ortak yaşam, simbiyoz"
+  },
+  {
+    "word": "synthetic",
+    "meaning": "yapay, sentetik"
+  },
+  {
+    "word": "tacit",
+    "meaning": "zımni, sözsüz anlaşma"
+  },
+  {
+    "word": "tactile",
+    "meaning": "dokunsal, dokunma ile ilgili"
+  },
+  {
+    "word": "tangible",
+    "meaning": "somut, elle tutulur"
+  },
+  {
+    "word": "tedious",
+    "meaning": "sıkıcı, bıktırıcı"
+  },
+  {
+    "word": "temperate",
+    "meaning": "ılıman, ölçülü, dengeli"
+  },
+  {
+    "word": "tenacious",
+    "meaning": "inatçı, sımsıkı tutunan"
+  },
+  {
+    "word": "tentative",
+    "meaning": "kesin olmayan, deneme mahiyetinde"
+  },
+  {
+    "word": "thread",
+    "meaning": "iplik, konu akışı"
+  },
+  {
+    "word": "threshold",
+    "meaning": "eşik, başlangıç noktası"
+  },
+  {
+    "word": "timid",
+    "meaning": "ürkek, çekingen"
+  },
+  {
+    "word": "token",
+    "meaning": "belirti, simge, jeton"
+  },
+  {
+    "word": "trace",
+    "meaning": "iz, eser, izini sürmek"
+  },
+  {
+    "word": "trait",
+    "meaning": "karakter özelliği, nitelik"
+  },
+  {
+    "word": "tranquil",
+    "meaning": "sakin, dingin, asude"
+  },
+  {
+    "word": "transient",
+    "meaning": "geçici, fani"
+  },
+  {
+    "word": "transition",
+    "meaning": "geçiş süreci"
+  },
+  {
+    "word": "tremendous",
+    "meaning": "muazzam, olağanüstü"
+  },
+  {
+    "word": "triumph",
+    "meaning": "büyük zafer, başarı"
+  },
+  {
+    "word": "trivial",
+    "meaning": "önemsiz, incir çekirdeğini doldurmaz"
+  },
+  {
+    "word": "turbulent",
+    "meaning": "çalkantılı, fırtınalı"
+  },
+  {
+    "word": "unanimous",
+    "meaning": "oybirliğiyle olan"
+  },
+  {
+    "word": "underlie",
+    "meaning": "altında yatmak, temeli olmak"
+  },
+  {
+    "word": "undermine",
+    "meaning": "baltalamak, altını oymak"
+  },
+  {
+    "word": "underscore",
+    "meaning": "vurgulamak, önemini belirtmek"
+  },
+  {
+    "word": "uniform",
+    "meaning": "tek biçimli, standart"
+  },
+  {
+    "word": "unprecedented",
+    "meaning": "eşi benzeri görülmemiş"
+  },
+  {
+    "word": "unravel",
+    "meaning": "çözmek, aydınlatmak"
+  },
+  {
+    "word": "upbeat",
+    "meaning": "neşeli, iyimser"
+  },
+  {
+    "word": "uphold",
+    "meaning": "arkasında durmak, savunmak"
+  },
+  {
+    "word": "utility",
+    "meaning": "fayda, kamu hizmeti"
+  },
+  {
+    "word": "utmost",
+    "meaning": "azami, son derece"
+  },
+  {
+    "word": "vacant",
+    "meaning": "boş, sahipsiz"
+  },
+  {
+    "word": "vague",
+    "meaning": "belirsiz, net olmayan"
+  },
+  {
+    "word": "valiant",
+    "meaning": "yiğit, cesur"
+  },
+  {
+    "word": "vanish",
+    "meaning": "ortadan kaybolmak"
+  },
+  {
+    "word": "variable",
+    "meaning": "değişken, değişkenlik gösteren"
+  },
+  {
+    "word": "veil",
+    "meaning": "örtü, peçe, örtbas etmek"
+  },
+  {
+    "word": "venerable",
+    "meaning": "saygıdeğer, muhterem"
+  },
+  {
+    "word": "venture",
+    "meaning": "girişim, riskli atılım"
+  },
+  {
+    "word": "verdict",
+    "meaning": "mahkeme kararı, hüküm"
+  },
+  {
+    "word": "verge",
+    "meaning": "kenar, eşik"
+  },
+  {
+    "word": "viable",
+    "meaning": "yaşayabilir, uygulanabilir"
+  },
+  {
+    "word": "vigilant",
+    "meaning": "tetikte, gözü açık"
+  },
+  {
+    "word": "vigor",
+    "meaning": "dinçlik, zindelik"
+  },
+  {
+    "word": "vindicate",
+    "meaning": "aklamak, haklılığını göstermek"
+  },
+  {
+    "word": "virtue",
+    "meaning": "erdem, fazilet"
+  },
+  {
+    "word": "vital",
+    "meaning": "hayati, dirimsel"
+  },
+  {
+    "word": "vivid",
+    "meaning": "canlı, berrak"
+  },
+  {
+    "word": "vocal",
+    "meaning": "sesli, açık sözlü"
+  },
+  {
+    "word": "void",
+    "meaning": "boşluk, geçersiz"
+  },
+  {
+    "word": "volatile",
+    "meaning": "oynak, dalgalı"
+  },
+  {
+    "word": "warrant",
+    "meaning": "garanti etmek, haklı kılmak"
+  },
+  {
+    "word": "wary",
+    "meaning": "ihtiyatlı, temkinli"
+  },
+  {
+    "word": "wholesome",
+    "meaning": "sağlığa yararlı, tertemiz"
+  },
+  {
+    "word": "widespread",
+    "meaning": "yaygın, geniş çapta"
+  },
+  {
+    "word": "witty",
+    "meaning": "hazırcevap, nüktedan"
+  },
+  {
+    "word": "woe",
+    "meaning": "keder, ıstırap"
+  },
+  {
+    "word": "wretched",
+    "meaning": "perişan, acınası"
+  },
+  {
+    "word": "yearn",
+    "meaning": "hasretini çekmek, yanıp tutuşmak"
+  },
+  {
+    "word": "zeal",
+    "meaning": "şevk, gayret, coşku"
+  },
+  {
+    "word": "zenith",
+    "meaning": "zirve, doruk noktası"
+  }
 ]

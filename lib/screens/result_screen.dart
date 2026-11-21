@@ -9,6 +9,7 @@ import '../services/audio_service.dart';
 import '../widgets/custom_button.dart';
 import '../widgets/banner_ad_widget.dart';
 import 'main_menu.dart';
+import 'game_screen.dart';
 
 class ResultScreen extends StatelessWidget {
   const ResultScreen({super.key});
@@ -107,16 +108,42 @@ class ResultScreen extends StatelessWidget {
               ),
 
               const SizedBox(height: 20),
-              CustomButton(
-                text: s.getText('main_menu'),
-                onPressed: () {
-                  AudioService().playClick();
-                  Navigator.pushAndRemoveUntil(
-                    context,
-                    MaterialPageRoute(builder: (_) => const MainMenu()),
-                    (r) => false
-                  );
-                }
+              Row(
+                children: [
+                  Expanded(
+                    child: CustomButton(
+                      text: s.getText('play_again'),
+                      color: AppColors.correctGreen,
+                      onPressed: () {
+                        AudioService().playClick();
+                        p.startGame(
+                          mode: p.activeMode,
+                          difficulty: p.currentDifficulty,
+                          useCustomWords: false,
+                        );
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(builder: (_) => const GameScreen())
+                        );
+                      }
+                    ),
+                  ),
+                  const SizedBox(width: 10),
+                  Expanded(
+                    child: CustomButton(
+                      text: s.getText('main_menu'),
+                      color: AppColors.primaryPurple,
+                      onPressed: () {
+                        AudioService().playClick();
+                        Navigator.pushAndRemoveUntil(
+                          context,
+                          MaterialPageRoute(builder: (_) => const MainMenu()),
+                          (r) => false
+                        );
+                      }
+                    ),
+                  ),
+                ],
               )
             ]
           )

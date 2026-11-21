@@ -1,9 +1,7 @@
 import java.util.Properties
-import java.io.FileInputStream
 
 plugins {
     id("com.android.application")
-    id("org.jetbrains.kotlin.android")
     id("dev.flutter.flutter-gradle-plugin")
 }
 
@@ -24,22 +22,14 @@ if (keystorePropertiesFile.exists()) {
 
 val testAdMobId = "ca-app-pub-3940256099942544~3347511713"
 
-android {
+configure<com.android.build.api.dsl.ApplicationExtension> {
     namespace = "com.frostsue.linguadash"
     compileSdk = 36
-    ndkVersion = "27.0.12077973"
+    ndkVersion = flutter.ndkVersion
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
-    }
-
-    kotlinOptions {
-        jvmTarget = "1.8"
-    }
-
-    sourceSets {
-        getByName("main").java.srcDirs("src/main/kotlin")
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 
     defaultConfig {
@@ -64,7 +54,7 @@ android {
             signingConfig = signingConfigs.getByName("release")
             isMinifyEnabled = true
             isShrinkResources = true
-            proguardFiles(getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro")
+            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
 
             val realId = keystoreProperties["admobAppId"] as String? ?: testAdMobId
             manifestPlaceholders["admobAppId"] = realId

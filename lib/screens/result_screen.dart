@@ -47,8 +47,11 @@ class ResultScreen extends StatelessWidget {
                 padding: const EdgeInsets.all(30),
                 decoration: BoxDecoration(
                   color: AppColors.white,
-                  borderRadius: BorderRadius.circular(20),
-                  boxShadow: const [BoxShadow(blurRadius: 10, color: Colors.black12)]
+                  borderRadius: BorderRadius.circular(24),
+                  border: Border.all(color: AppColors.primaryPurple.withOpacity(0.12), width: 1.5),
+                  boxShadow: [
+                    BoxShadow(color: AppColors.primaryPurple.withOpacity(0.08), blurRadius: 20, offset: const Offset(0, 10))
+                  ]
                 ),
                 child: Column(
                   children: [

@@ -164,8 +164,10 @@ class _GameScreenState extends State<GameScreen> with SingleTickerProviderStateM
                   decoration: BoxDecoration(
                     color: AppColors.white,
                     borderRadius: BorderRadius.circular(24),
-                    border: Border.all(color: AppColors.primaryPurple, width: 2),
-                    boxShadow: const [BoxShadow(color: Colors.black12, blurRadius: 8, offset: Offset(0, 4))]
+                    border: Border.all(color: AppColors.primaryPurple.withOpacity(0.15), width: 2),
+                    boxShadow: [
+                      BoxShadow(color: AppColors.primaryPurple.withOpacity(0.08), blurRadius: 16, offset: const Offset(0, 8))
+                    ]
                   ),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,

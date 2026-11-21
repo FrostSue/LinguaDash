@@ -110,15 +110,12 @@ class _ModeSelectionScreenState extends State<ModeSelectionScreen> {
             onTap: () => _countFlow(context, settings)
           ),
 
-          Opacity(
-            opacity: 0.5,
-            child: _buildCard(
-              title: "${settings.getText('levels')} (${settings.getText('coming_soon')})",
-              icon: Icons.lock,
-              color: Colors.grey,
-              modeKey: "levels",
-              onTap: () {}
-            )
+          _buildCard(
+            title: settings.getText('levels'),
+            icon: Icons.military_tech,
+            color: Colors.amber.shade700,
+            modeKey: "levels",
+            onTap: () => _levelsFlow(context, settings)
           ),
         ],
       ),
@@ -193,6 +190,48 @@ class _ModeSelectionScreenState extends State<ModeSelectionScreen> {
       [25, 50, 75, 100], 
       (val) => _difficultyFlow(c, s, GameMode.wordCount, n: val),
       limit: 300 
+    );
+  }
+
+  void _levelsFlow(BuildContext c, SettingsProvider s) {
+    showDialog(
+      context: c,
+      builder: (ctx) => AlertDialog(
+        backgroundColor: AppColors.white,
+        title: Text(
+          s.getText('levels'),
+          style: const TextStyle(fontFamily: 'Monogram', fontSize: 26, fontWeight: FontWeight.bold)
+        ),
+        content: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            ListTile(
+              leading: const Icon(Icons.star, color: Colors.green),
+              title: const Text("Level 1 (Easy Sprint - 20 Words)", style: TextStyle(fontWeight: FontWeight.bold)),
+              onTap: () {
+                Navigator.pop(ctx);
+                _launch(c, GameMode.wordCount, Difficulty.easy, null, 20);
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.star, color: Colors.orange),
+              title: const Text("Level 2 (Medium Sprint - 30 Words)", style: TextStyle(fontWeight: FontWeight.bold)),
+              onTap: () {
+                Navigator.pop(ctx);
+                _launch(c, GameMode.wordCount, Difficulty.medium, null, 30);
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.star, color: Colors.red),
+              title: const Text("Level 3 (Hard Sprint - 40 Words)", style: TextStyle(fontWeight: FontWeight.bold)),
+              onTap: () {
+                Navigator.pop(ctx);
+                _launch(c, GameMode.wordCount, Difficulty.hard, null, 40);
+              },
+            ),
+          ],
+        ),
+      ),
     );
   }
 

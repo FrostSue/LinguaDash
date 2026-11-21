@@ -76,22 +76,9 @@ class _MainMenuState extends State<MainMenu> {
     });
   }
 
-  Future<void> _onCustomGamePressed(BuildContext context, SettingsProvider settings) async {
+  void _onCustomGamePressed(BuildContext context, SettingsProvider settings) {
     AudioService().playClick();
-    final scores = await StorageService().loadHighScores();
-    
-    bool isUnlocked = (scores['classic'] ?? 0) >= 500 ||
-                      (scores['timeAttack'] ?? 0) >= 500 ||
-                      (scores['wordCount'] ?? 0) >= 500 ||
-                      (scores['infinite'] ?? 0) >= 500;
-
-    if (isUnlocked) {
-      if (context.mounted) {
-        Navigator.push(context, MaterialPageRoute(builder: (_) => const ModeSelectionScreen(isCustom: true)));
-      }
-    } else {
-      if (context.mounted) _showLockedDialog(context, settings);
-    }
+    Navigator.push(context, MaterialPageRoute(builder: (_) => const ModeSelectionScreen(isCustom: true)));
   }
 
   void _showLockedDialog(BuildContext context, SettingsProvider s) {

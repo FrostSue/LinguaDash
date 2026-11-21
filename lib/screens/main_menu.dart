@@ -238,6 +238,18 @@ class _MainMenuState extends State<MainMenu> {
                       s.getText('game_title'), 
                       style: TextStyle(fontSize: 60, color: AppColors.primaryPurple, fontFamily: s.fontFamily)
                     ),
+
+                    const SizedBox(height: 4),
+
+                    Text(
+                      s.getText('subtitle'),
+                      style: const TextStyle(
+                        fontSize: 14,
+                        letterSpacing: 1.5,
+                        color: Color(0xFF64748B),
+                        fontWeight: FontWeight.w600
+                      )
+                    ),
                     
                     const SizedBox(height: 40),
 

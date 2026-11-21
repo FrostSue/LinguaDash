@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 
 class AppColors {
-  static const Color background = Color(0xFFF5E6D3);
-  static const Color primaryPurple = Color(0xFF4A2C40);
-  static const Color secondaryTeal = Color(0xFF2E8B57);
-  static const Color correctGreen = Color(0xFF228B22);
-  static const Color wrongRed = Color(0xFFB22222);
-
+  static const Color background = Color(0xFFF8FAFC);
+  static const Color primaryPurple = Color(0xFF4F46E5);
+  static const Color secondaryTeal = Color(0xFF06B6D4);
+  static const Color correctGreen = Color(0xFF10B981);
+  static const Color wrongRed = Color(0xFFEF4444);
 
   static const Color white = Color(0xFFFFFFFF);
-  static const Color black = Color(0xFF1A1A1A);
-  static const Color cardColor = Color(0xFFFFFAF0);
+  static const Color black = Color(0xFF0F172A);
+  static const Color cardColor = Color(0xFFFFFFFF);
+  static const Color surfaceMuted = Color(0xFFF1F5F9);
+  static const Color borderSubtle = Color(0xFFE2E8F0);
 }
 
 class AppTexts {
@@ -181,7 +182,7 @@ The developer reserves the right to modify game features at any time.
       'privacy_policy': 'Gizlilik Politikası',
       'terms_of_use': 'Kullanım Koşulları',
       'developer': 'Geliştirici',
-      'version': 'Sürüm 1.0.0',
+      'version': 'Sürüm 1.0.1 (v12)',
       'mail_subject': 'LinguaDash Destek',
       'mail_error': 'Mail uygulaması bulunamadı.',
       'locked_title': 'Kilitli!',
@@ -241,7 +242,7 @@ The developer reserves the right to modify game features at any time.
       'privacy_policy': 'Privacy Policy',
       'terms_of_use': 'Terms of Use',
       'developer': 'Developer',
-      'version': 'Version 1.0.0',
+      'version': 'Version 1.0.1 (v12)',
       'mail_subject': 'LinguaDash Support',
       'mail_error': 'No email client found.',
       'locked_title': 'Locked!',

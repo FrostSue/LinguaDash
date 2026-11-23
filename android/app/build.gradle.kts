@@ -35,7 +35,7 @@ configure<com.android.build.api.dsl.ApplicationExtension> {
     defaultConfig {
         applicationId = "com.frostsue.linguadash"
         minSdk = flutter.minSdkVersion
-        targetSdk = 35
+        targetSdk = 36
         versionCode = flutterVersionCode.toInt()
         versionName = flutterVersionName
     }

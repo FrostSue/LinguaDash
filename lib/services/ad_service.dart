@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'ad_helper.dart';
 
@@ -15,22 +16,22 @@ class AdService {
   bool get areAdsEnabled => _adsEnabled;
 
   Future<void> init() async {
-    if (!_adsEnabled) return;
+    if (!_adsEnabled || kIsWeb) return;
 
-    await MobileAds.instance.initialize();
-    print("AdMob SDK Initialized");
-    _loadInterstitial();
+    try {
+      await MobileAds.instance.initialize();
+      _loadInterstitial();
+    } catch (_) {}
   }
 
   void _loadInterstitial() {
-    if (!_adsEnabled) return;
+    if (!_adsEnabled || kIsWeb) return;
 
     InterstitialAd.load(
       adUnitId: AdHelper.interstitialAdUnitId,
       request: const AdRequest(),
       adLoadCallback: InterstitialAdLoadCallback(
         onAdLoaded: (ad) {
-          print("Interstitial Ad Loaded!");
           _interstitialAd = ad;
           _interstitialAd!.fullScreenContentCallback = FullScreenContentCallback(
             onAdDismissedFullScreenContent: (ad) {
@@ -44,7 +45,6 @@ class AdService {
           );
         },
         onAdFailedToLoad: (err) {
-          print('Interstitial failed to load: $err');
           _interstitialAd = null;
         }
       )
@@ -52,17 +52,15 @@ class AdService {
   }
 
   void showInterstitialIfReady() {
-    if (!_adsEnabled) return;
+    if (!_adsEnabled || kIsWeb) return;
 
     _gameOverCounter++;
-    print("Game Over Counter: $_gameOverCounter");
 
     if (_gameOverCounter >= _adFrequency) {
       if (_interstitialAd != null) {
         _interstitialAd!.show();
         _gameOverCounter = 0;
       } else {
-        print("Interstitial not ready yet.");
         _loadInterstitial();
       }
     }

@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import '../services/ad_helper.dart';
@@ -19,7 +20,7 @@ class _BannerAdWidgetState extends State<BannerAdWidget> {
   @override
   void initState() {
     super.initState();
-    if (AdService().areAdsEnabled) {
+    if (!kIsWeb && AdService().areAdsEnabled) {
       _loadAd();
     }
   }
@@ -66,7 +67,7 @@ class _BannerAdWidgetState extends State<BannerAdWidget> {
 
   @override
   Widget build(BuildContext context) {
-    if (AdService().areAdsEnabled && _isLoaded && _bannerAd != null) {
+    if (!kIsWeb && AdService().areAdsEnabled && _isLoaded && _bannerAd != null) {
       return Container(
         alignment: Alignment.center,
         width: _bannerAd!.size.width.toDouble(),
